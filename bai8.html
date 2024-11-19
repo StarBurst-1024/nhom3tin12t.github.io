@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Bài 8</title>
+		<style>
+			p {font-family:Times New Roman;font-size:20px}
+			.custom-list li::marker {color:#8735fe;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div style="background-color:#8735fe; height:125px; text-align:center; border:1px solid; border-color:#8735fe">
+				<p style="color:white; font-size:40px"><b>BÀI 8: ĐỊNH DẠNG VĂN BẢN</b></p>
+			</div>
+			<div style="margin-top:10px; border:1px solid; border-color:#8735fe">
+			
+				<div>
+					<p style="font-size:30px"><b>1. Thuộc tính thẻ</b></p>
+					<p style="margin-left:20px">_ Thẻ có thể có hoặc không có thuộc tính. Thuộc tính của thẻ có tác dụng bổ sung thông tin, làm rõ cách xử lí cho thẻ chứa nó.</p>
+				</div>
+				
+				<div>
+					<p style="font-size:30px"><b>2. Các thẻ định dạng trình bày văn bản</b></p>
+					<p><b>a) Định dạng tiêu đề: </b></p>
+					<p style="margin-left:20px">_ Sử dụng các thẻ dạng &lt;hx&gt; trong đó × nhận một trong các giá trị từ 1 đến 6 để phân cấp tiêu đề theo các mức khác nhau.</p>
+					<p style="margin-left:20px">_ Thẻ &lt;h1&gt; được sử dụng cho tiêu đề chính hay tiêu đề chung của cả văn bản. Các tiêu đề ở mức thấp hơn dùng thẻ &lt;h2&gt; và tiếp tục với các mức tiếp theo.</p>
+					<p><b>b) Định dạng đoạn văn bản: </b></p>
+					<p style="margin-left:20px">_ Các đoạn được định dạng bằng thẻ &lt;p&gt; phù hợp với văn bản chứa nhiều chữ.</p>
+					<p style="margin-left:20px">_ Khi cần thao tác với nhiều loại nội dung, ta có thể sử dụng thẻ &lt;div&gt; và thẻ &lt;span&gt;</p>
+					<p style="margin-left:20px">_ Phần tử &lt;div&gt; là một khối, bắt đầu trên dòng mới.</p>
+					<p style="margin-left:20px">_ Phần tử &lt;span&gt; có tác dụng tương tự nhưng sử dụng cho quy mô nhỏ hơn, nội dung khối hiển thị trên cùng dòng đang viết</p>
+					<p style="margin-left:20px"><b>Lưu ý:</b> Ngoài các thẻ định dạng đoạn và khối kể trên, còn có hai thẻ &lt;br&gt; và &lt;hr&gt; để xuống dòng hoặc tạo ra một đường kẻ ngang trên trang web.</p>
+				</div>
+				
+				<div style="width:100%">
+					<p style="font-size:30px"><b>3. Các thẻ định dạng phông chữ</b></p>
+					<p><b>a) Định dạng kiểu chữ: </b></p>
+					<div>
+						<table style="margin:0 auto; width:85%">
+							<tr style="font-family:Calibri; font-size:20px" height="50px">
+								<th style="background-color:#f7941d; border-color:#f7941d"; width="20%">Kiểu chữ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d"; width="10%">Thẻ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d"; width="35%">Ví dụ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d"; width="20%">Hiển thị trên trình duyệt</th>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ thường</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây là câu chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây là câu chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ đậm</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;strong&gt;</b>;<b style="color:#ab0000">&lt;b&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;strong&gt;</b>là câu<b style="color:#ab0000">&lt;/strong&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <strong>là câu</strong> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ nghiêng</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;em&gt;</b>;<b style="color:#ab0000">&lt;i&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;em&gt;</b>là câu<b style="color:#ab0000">&lt;/em&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <em>là câu</em> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Gạch chân</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;u&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;u&gt;</b>là câu<b style="color:#ab0000">&lt;/u&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <u>là câu</u> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đánh dấu</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;mark&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;mark&gt;</b>là câu<b style="color:#ab0000">&lt;/mark&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <mark>là câu</mark> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Giảm cỡ chữ</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;small&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;small&gt;</b>là câu<b style="color:#ab0000">&lt;/small&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <small>là câu</small> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chỉ số trên hoặc dưới</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;sup&gt;</b>;<b style="color:#ab0000">&lt;sub&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;sup&gt;</b>là câu<b style="color:#ab0000">&lt;/sup&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <sup>là câu</sup> chuẩn</td>
+							</tr>
+							<tr style="font-family:Calibri; font-size:18px" height="50px">
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đánh dấu xóa (bằng nét gạch giữa chữ)</td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><b style="color:#ab0000">&lt;del&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><b style="color:#ab0000">&lt;p&gt;</b>Đây <b style="color:#ab0000">&lt;del&gt;</b>là câu<b style="color:#ab0000">&lt;/del&gt;</b> chuẩn<b style="color:#ab0000">&lt;/p&gt;</b></td>
+								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <del>là câu</del> chuẩn</td>
+							</tr>
+						</table>
+					</div>
+					<p style="margin-left:20px">Lưu ý: </p>
+					<p style="margin-left:20px">_ HTML5 không hỗ trợ thẻ &lt;big&gt; và &lt;u&gt;.</p>
+					<p style="margin-left:20px">_ Các thẻ &lt;strong&gt;, &lt;em&gt; nhấn mạnh vào ngữ nghĩa của nội dung.</p>
+					<p><b>b) Định dạng phông chữ: </b></p>
+					<p style="margin-left:20px">_ Để định dạng phông chữ, ta sử dụng thuộc tính style. Các thuộc tính màu sắc, phông chữ, cỡ chữ được xác định như sau:</p>
+					<ul class="custom-list" style="font-size:20px; line-height:1.5">
+						<li>Màu sắc: <b style="color:#ab0000">&lt;p</b> <span style="color:red">style</span>=<span style="color:#5600b0">"color:<u>màu</u>"</span><b style="color:#ab0000">&gt;</b>Nội dung.<b style="color:#ab0000">&lt;/p&gt;</b>.</li>
+						<li>Phông chữ: <b style="color:#ab0000">&lt;p</b> <span style="color:red">style</span>=<span style="color:#5600b0">"font-family:<u>tên phông</u>"</span><b style="color:#ab0000">&gt;</b>Nội dung.<b style="color:#ab0000">&lt;/p&gt;</b>.</li>
+						<li>Cỡ chữ: <b style="color:#ab0000">&lt;p</b> <span style="color:red">style</span>=<span style="color:#5600b0">"font-size:<u>cỡ</u>"</span><b style="color:#ab0000">&gt;</b>Nội dung.<b style="color:#ab0000">&lt;/p&gt;</b>. Có nhiều cách xác định cỡ chữ: dùng số kèm đơn vị (px-pixel, mm, cm,...) hoặc cỡ chữ thông dụng (small, medium, large,...).</li>
+					</ul>
+					<p style="margin-left:20px">Lưu ý:</p>
+					<p style="margin-left:20px">_ Giá trị màu sắc được sử dụng theo tiếng Anh: red, green, white,... hoặc giá trị màu trong hệ RGB: rgb(205,0,0), rgb(255,255,255),... hoặc các giá trị màu theo hệ 
+					thập lục phân: #8735FE, #3575AB,... .</p>
+					<p style="margin-left:20px">_ Khi muốn thực hiện nhiều định dạng đồng thời, ta ngăn cách các cặp tên:giá trị với nhau bởi dấu “;”.</p>
+				</div>
+				
+				<div>
+					<p style="font-size:30px"><b>4. Thực hành</b></p>
+				</div>
+				
+				<div>
+					<p style="font-size:30px"><b>5. Luyện tập</b></p>
+				</div>
+				
+				<div>
+					<p style="font-size:30px"><b>6. Vận dụng</b></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
