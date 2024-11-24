@@ -81,24 +81,64 @@
 				
 				<div>
 					<p style="font-size:30px; color:#c64801"><b>II. Thiết lập bảng</b></p>
-					<p style="margin-left:20px">_ Phần tử bảng dùng để biểu diễn dữ liệu có cấu trúc dạng bảng. Phần tử bảng được tạo bởi các thẻ chính là &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; và &lt;th&gt;; trình bày bảng bằng thuộc tính style.</p>
+					<p style="margin-left:20px">_ Phần tử bảng dùng để biểu diễn dữ liệu có cấu trúc dạng bảng. Phần tử bảng được tạo bởi các thẻ chính là <span style="color:#ab0000">&lt;table&gt;</span>, <span style="color:#ab0000">&lt;tr&gt;</span>, 
+					<span style="color:#ab0000">&lt;td&gt;</span> và <span style="color:#ab0000">&lt;th&gt;</span>; trình bày bảng bằng thuộc tính <span style="color:red">style</span>.</p>
 					<p style="margin-left:20px">_ Các định dạng cơ bản bao gồm: thêm tiêu đề cho bảng, tạo khung bảng, điều chỉnh kích thước của hàng/cột/ô và gộp ô:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5">
-						<li style="font-family:Times New Roman;font-size:20px"><em>Thêm tiêu đề</em>: Sử dụng cặp thẻ &lt;caption&gt;&lt;/caption&gt;, ngay sau thẻ &lt;table&gt; và trước thẻ &lt;tr&gt; đầu tiên.</li>
-						<li style="font-family:Times New Roman;font-size:20px"><em>Tạo khung bảng</em>: Độ dày khung được thiết lập cho viền khung bảng hoặc khung của từng ô trong bằng cách thuộc tính con border của thuộc tính style có giá trị là một 
-						bộ ba thuộc tính nhỏ hơn sau: "độ_dày_theo_px kiểu_viền [màu_viền]". <br/>Trong đó, ba thuộc tính cách nhau bởi dấu cách, hai thuộc tính dầu là bắt buộc; thuộc tính kiểu_viền có thể nhận một trong bốn giá trị (solid, dotted, 
-						double, none), còn thuộc tính màu_viền mặc định là màu đen và có thể bỏ qua.</li>
-						<li style="font-family:Times New Roman;font-size:20px"><em>Điều chỉnh kích thước</em>: Sử dụng thuộc tính con width và height của thuộc tính style. Kích thước được đặt có thể là theo tỉ lệ với khối bao ngoài đối tượng (%) hoặc 
-						theo số điểm ảnh (px).</li>
-						<li style="font-family:Times New Roman;font-size:20px"><em>Gộp ô</em>: Sử dụng thuộc tính rowspan (cho hàng) và colspan (cho cột). Bản chất của việc gộp ô là mở rộng một ô bằng cách thêm một số hàng hoặc một số cột lân cận có 
-						cùng nội dung. Việc gộp ô thực hiện như sau: <br/>
-						_ Thêm rowspan="số_hàng_muốn_ghép" (gộp hàng) hoặc colspan="số_cột_muốn ghép" (gộp cột) cho phần tử &lt;th&gt; hoặc &lt;td&gt; thuộc hàng (hoặc cột nếu là gộp cột) đầu tiên cần ghép.<br/>
-						_ Đối với các hàng (hoặc cột) tiếp theo: Bỏ qua cặp thẻ &lt;th&gt; hoặc &lt;td&gt; tại vị trí tương ứng</li>
+						<li style="font-family:Times New Roman;font-size:20px"><em>Thêm tiêu đề</em>: Sử dụng cặp thẻ <span style="color:#ab0000">&lt;caption&gt;&lt;/caption&gt;</span>, ngay sau thẻ <span style="color:#ab0000">&lt;table&gt;</span> và 
+						trước thẻ <span style="color:#ab0000">&lt;tr&gt;</span> đầu tiên.</li>
+						<li style="font-family:Times New Roman;font-size:20px"><em>Tạo khung bảng</em>: Độ dày khung được thiết lập cho viền khung bảng hoặc khung của từng ô trong bằng cách thuộc tính con <span style="color:#5600b0">border</span> của 
+						thuộc tính <span style="color:red">style</span> có giá trị là một bộ ba thuộc tính nhỏ hơn sau: <span style="color:#5600b0">"độ_dày_theo_px kiểu_viền [màu_viền]"</span>. 
+						Ví dụ: <span style="color:red">style</span>=<span style="color:#5600b0">"border:2px double red"</span><br/>
+						Trong đó, ba thuộc tính cách nhau bởi dấu cách, hai thuộc tính dầu là bắt buộc; thuộc tính <span style="color:#5600b0">kiểu_viền</span> có thể nhận một trong bốn giá trị <span style="color:#5600b0">(solid, dotted, double, none)
+						</span>, còn thuộc tính <span style="color:#5600b0">màu_viền</span> mặc định là màu đen và có thể bỏ qua.</li>
+						<li style="font-family:Times New Roman;font-size:20px"><em>Điều chỉnh kích thước</em>: Sử dụng thuộc tính con <span style="color:#5600b0">width</span> và <span style="color:#5600b0">height</span> của thuộc tính 
+						<span style="color:red">style</span>. Kích thước được đặt có thể là theo tỉ lệ với khối bao ngoài đối tượng (%) hoặc theo số điểm ảnh (px).</li>
+						<li style="font-family:Times New Roman;font-size:20px"><em>Gộp ô</em>: Sử dụng thuộc tính <span style="color:red">rowspan</span> (cho hàng) và <span style="color:red">colspan</span> (cho cột). Bản chất của việc gộp ô là mở rộng 
+						một ô bằng cách thêm một số hàng hoặc một số cột lân cận có cùng nội dung. Việc gộp ô thực hiện như sau: <br/>
+						_ Thêm <span style="color:red">rowspan</span>=<span style="color:#5600b0">"số_hàng_muốn_ghép"</span> (gộp hàng) hoặc <span style="color:red">colspan</span>=<span style="color:#5600b0">"số_cột_muốn_ghép"</span> (gộp cột) cho phần 
+						tử <span style="color:#ab0000">&lt;th&gt;</span> hoặc <span style="color:#ab0000">&lt;td&gt;</span> thuộc hàng (hoặc cột nếu là gộp cột) đầu tiên cần ghép.<br/>
+						_ Đối với các hàng (hoặc cột) tiếp theo: Bỏ qua cặp thẻ <span style="color:#ab0000">&lt;th&gt;</span> hoặc <span style="color:#ab0000">&lt;td&gt;</span> tại vị trí tương ứng</li>
 					</ul>
 				</div>
 				
 				<div>
 					<p style="font-size:30px; color:#c64801"><b>III. Thực hành tạo danh sách và bảng</b></p>
+					<p style="margin-left:10px"><b>Nhiệm vụ 1: </b></p>
+					<div style="border:1px solid; width:30%; margin:0 auto">
+						<ul>
+							<li style="list-style-type:disc">THỂ THAO
+								<ol type="1">
+									<li>Bóng đá</li>
+									<li>Bóng chuyền</li>
+									<li>Bóng rổ</li>
+									<li>Võ
+										<ol type="a">
+											<li>Karatedo</li>
+											<li>Taekwondo</li>
+											<li>Vovinam</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>NGHỆ THUẬT
+								<ol type="1">
+									<li>Mĩ thuật</li>
+									<li>Nhiếp ảnh</li>
+									<li>Âm nhạc
+										<ol type="a">
+											<li>Thanh nhạc</li>
+											<li>Piano</li>
+											<li>Violin</li>
+										</ol>
+									</li>
+									<li>Khiêu vũ</li>
+								</ol>
+							</li>
+						</ul>
+					</div>
+					<p style="margin-left:10px"><b>Nhiệm vụ 2: </b></p>
+					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
 				</div>
 				
 				<div>
@@ -133,25 +173,30 @@
 			
 				<div>
 					<p style="font-size:30px; color:#c64801"><b>V. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1. Các bước để sử dụng một màu cụ thể trong bức tranh làm màu cho tiêu đề bài thơ: </b></p>
-					<ul class="custom-list" style="font-size:20px; line-height:1.5;list-style-type:square">
-						<li><b>Bước 1: </b>Mở hình ảnh bằng những phần mềm chỉnh sửa ảnh.</li>
-						<li><b>Bước 2: </b>Ở công cụ chọn màu trên phần mềm, chọn Eyedropper.</li>
-						<li><b>Bước 3: </b>Di chuyển chuột đến điểm ảnh có màu cần chọn và ghi lại giá trị RGB được hiển thị (có dạng RGB(x,y,z)).</li>
-						<li><b>Bước 4: </b>Thiết lập màu cho tiêu đề bằng thuộc tính style, ví dụ tiêu đề sử dụng thẻ <span style="color:#ab0000">&lt;h1&gt;</span>: 
-						<p style="margin-top:0px; text-align:center"><span style="color:#ab0000">&lt;h1</span> <span style="color:red">style</span> = <span style="color:#5600b0">"color:rgb(x,y,z)"</span>
-						<span style="color:#ab0000">&gt;</span>Tiêu đề<span style="color:#ab0000">&lt;/h1&gt;<span></p></li>
-					</ul>
-					<p style="margin-left:10px"><b>2. Hãy đưa ra cách định dạng một đoạn văn bản để được kết quả sau: </b></p>
-					<div style="border:1px solid; width:90%; margin:0 auto; text-align:center">
-						<p style="margin-left:15px; margin-top:15px; margin-bottom:15px; font-size:50px">0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0</p>
-					</div>
-					<br/>
+					<p style="margin-left:10px"><b>1. Viết chương trình Python: </b></p>					
 					<div style="line-height:0.5; width:90%; margin:0 auto; border:1px solid">
-						<p style="margin-left:20px">&lt;p style="font-size:50px"&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
-						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
-						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
-						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/p&gt;</p>
+						<p style="margin-left:20px">data_input=[['Nguyễn Tấn Hoàng A',10,9,8], ['Lê Hoàng B', 9, 9.5,8.5], ['Nguyễn Minh C', 9.5,9.5,9]]</p>
+						<p style="margin-left:20px">output_file=open("D:\XAMPP\htdocs\vdungbai9.html","w", encoding="utf-8")</p>
+						<p style="margin-left:20px">content="&lt;table border=\"1\"&gt;\n"</p>
+						<p style="margin-left:20px">content+="""</p>
+						<p style="margin-left:20px">&lt;tr&gt;</p>
+						<p style="margin-left:20px">&lt;th style="border:1px" rowspan="2"&gt;Họ và tên&lt;/th&gt;</p>
+						<p style="margin-left:20px">&lt;th style="border:1px" colspan="3"&gt;Điểm thi&lt;/th&gt;</p>
+						<p style="margin-left:20px">&lt;/tr&gt;</p>
+						<p style="margin-left:20px">&lt;tr&gt;</p>
+						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Toán&lt;/td&gt;</p>
+						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Vật lí&lt;/td&gt;</p>
+						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Hóa học&lt;/td&gt;</p>
+						<p style="margin-left:20px">&lt;/tr&gt;</p>
+						<p style="margin-left:20px">"""</p><br/>
+						<p style="margin-left:20px">for dulieu in data input:</p>
+						<p style="margin-left:40px">content+="&lt;tr&gt;"</p>
+						<p style="margin-left:40px">for d in dulieu:</p>
+						<p style="margin-left:60px">content+="""&lt;td style="border:1px solid red"&gt;"""+str(d)+"""&lt;/td&gt;"""</p>
+						<p style="margin-left:40px">content+="&lt;/tr&gt;\n"</p>
+						<p style="margin-left:20px">content+="&lt;/table&gt;"</p>
+						<p style="margin-left:20px">output_file.write(content)</p>
+						<p style="margin-left:20px">output_file.close()</p>
 					</div>
 				</div>
 				<br/>
