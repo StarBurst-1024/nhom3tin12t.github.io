@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Bài 10</title>
+		<style>
+			p {font-family:Times New Roman;font-size:20px}
+			li {font-family:Times New Roman;font-size:20px}
+			.custom-list li::marker {color:#00c408;}
+		</style>
+	</head>
+	<body style="margin:0px">
+		<div>
+			<div style="background-color:#00c408; height:125px; text-align:center; border:1px solid; border-color:#00c408">
+				<p style="color:white; font-size:40px"><b>BÀI 10: TẠO LIÊN KẾT</b></p>
+			</div>
+			<div style="margin:10px; border:1px solid; border-color:#00c408">
+			
+				<div>
+					<p style="font-size:30px; color:#049f0a"><b>I. Siêu văn bản và đường dẫn</b></p>
+					<p style="margin-left:20px">_ Siêu văn bản (hypertext) là loại văn bản mà nội dung của nó không chỉ chứa văn bản mà còn có thể chứa nhiều dạng dữ liệu khác như âm thanh, hình ảnh,... và đặc biệt là chứa các siêu liên kết (hyperlink) 
+					tới siêu văn bản khác.</p>
+					<p style="margin-left:20px">_ Siêu liên kết (còn gọi tắt là liên kết) là một tham chiếu để liên kết tới siêu văn bản khác.</p>
+					<p style="margin-left:20px">_ Thẻ <span style="color:#ab0000">&lt;a&gt;</span> dùng cho các liên kết, có cấu trúc chung:<br>
+					<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"URL"</span><span style="color:#ab0000">&gt;</span>Nội dung hiển thị tại vị trí đặt liên kết<span style="color:#ab0000">&lt;/a&gt;</span>
+					</p>
+					<p style="margin-left:20px; margin-bottom:0px">_ Có 2 loại URL:</p>
+					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
+						<li><em>Đường dẫn tuyệt đối</em>: Cung cấp một địa chỉ đầy đủ bao gồm cả giao thức (http:// hoặc https://), tên miền (domain name) và đường dẫn chi tiết nếu cần. Sử dụng khi là liên kết trên mạng Internet mà tài liệu không nằm 
+						trên máy chủ của mình</li>
+						<li><em>Đường dẫn tương đối</em>: Mô tả cách truy cập tài liệu được liên kết từ vị trí của tài liệu hiện tại. Sử dụng khi liên kết đến tài liệu khác trên cùng trang web (cùng máy chủ hoặc máy tính cài đặt trang web), không yêu 
+						cầu giao thức hay tên miển mà cẩn đường dẫn.</li>
+					</ul>
+				</div>
+				
+				<div>
+					<p style="font-size:30px; color:#049f0a"><b>II. Các cách tạo liên kết tới một trang web</b></p>
+					<p style="margin-left:10px"><b>1) Liên kết tới một trang web khác: </b></p>
+					<p style="margin-left:20px">_ Liên kết từ một trang web tới một trang web khác trên Internet được gọi là liên kết ngoài. Để tạo liên kết ngoài, ta sử dụng thẻ <span style="color:#ab0000">&lt;a&gt;</span> và truyền đường dẫn tuyệt 
+					đối cho thuộc tính <span style="color:red">href</span>.</p>
+					<p style="margin-left:10px"><b>2) Liên kế đến mọt vị trí khác trong cùng website: </b></p>
+					<p style="margin-left:20px">_ Trong lập trình web, phần lớn các liên kết được sử dụng là liên kết trỏ tới các trang trong website của mình.</p>
+					<p style="margin-left:20px; margin-bottom:0px">_ Các trường hợp liên kết web: </p>
+					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
+						<li>
+							<em>Liên kết tới trang web cùng thư mục</em>: <br>
+							Để liên kết tới một tệp trong cùng thư mục, ta chỉ cần cung cấp tên của tệp liên kết tới. Ví dụ tạo liên kết từ trang index.html tới trang thong_tin.html như sau: <br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"thong_tin.html"</span><span style="color:#ab0000">&gt;</span>Giới thiệu về trang web<span style="color:#ab0000">&lt;/a&gt;</span>
+						</li>
+						<li>
+							<em>Liên kết tới trang web thuộc thư mục khác, dưới một cấp</em>: <br>
+							Đường dẫn đến trang web khác thư mục, dưới một cấp gồm tên thư mục và tên tệp được phân cách băng dấu "<span style="color:#ab0000">/</span>". Ví dụ tạo liên kêt từ trang index.html tới trang bai_tap_1.html như sau: <br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai_tap/bai_tap_1.html"</span><span style="color:#ab0000">&gt;</span>Bài tập 1<span style="color:#ab0000">&lt;/a&gt;</span>
+						</li>
+						<li>
+							<em>Liên kết tới trang web thuộc thư mục khác, dưới hai (hay nhiều) cấp</em>: <br>
+							Mỗi cấp thư mục hoặc tệp tin được phân cách bởi dấu "<span style="color:#ab0000">/</span>". Ví dụ: tạo liên kêt từ trang index.html tới trang baitap_on_tap.html như sau: <br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai_tap/on_tap/bai_tap_on_tap.html"</span><span style="color:#ab0000">&gt;</span>Bài tập ôn tập<span style="color:#ab0000">&lt;/a&gt;</span><br>
+							Trong trường hợp trang web liên kết tới nằm ở thư mục mức trên, ta sử dụng các kí tự "<span style="color:#5600b0">..</span><span style="color:#ab0000">/</span>". Khi sử dụng "<span style="color:#5600b0">..</span><span style="color:#ab0000">/</span>" 
+							trong đường dẫn, tức là chỉ định "trở lại thư mục trên một mức" của thư mục chứa tệp có liên kết. Số cụm "<span style="color:#5600b0">..</span><span style="color:#ab0000">/</span>" trong đường dẫn tương ứng với số mức quay 
+							trở lại thư mục ở mức trên. Ví dụ, đoạn mã HTML sau chỉ dẫn địa chỉ từ trang bai_tap_1.html trong thư mục bai_tap quay lại trang index.html trong thư mục web, là thư mục mẹ của thư mục bai_tap:<br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"../index.html"</span><span style="color:#ab0000">&gt;</span>Quay lại trang chủ<span style="color:#ab0000">&lt;/a&gt;</span>
+						</li>
+						<li>
+							<em>Liên kết tới vị trí khác trong cùng trang web</em>: <br>
+							Các bước thực hiện: <br>
+							<span style="color:#5600b0">Bước 1:</span> Tạo phần tử HTML có thuộc tính <span style="color:red">id</span> nằm tại vị trí được liên kết đến.<br>
+							<span style="color:#5600b0">Bước 2:</span> Tạo liên kêt tới phần tử trên.<br>
+							Để liên kết tới phần tử vừa tạo, ta thiết lập thuộc tính <span style="color:red">href</span>=<span style="color:#5600b0">"#mã_định_danh_đoạn"</span>.<br>
+							Ví dụ: Hai câu lệnh dưới đây sẽ tạo mọt bảng với id là Thong_tin và đặt liên kết tới bảng đó:<br>
+							<span style="color:#ab0000">&lt;table</span> <span style="color:red">id</span>=<span style="color:#5600b0">"Thong_tin"</span><span style="color:#ab0000">&gt;</span>...<span style="color:#ab0000">&lt;/table&gt;</span><br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"#Thong_tin"</span><span style="color:#ab0000">&gt;</span>Thông tin chi tiết<span style="color:#ab0000">&lt;/a&gt;</span>
+						</li>
+						<li>
+							<em>Tạo liên kết tới hình ảnh</em>: <br>
+							Để tạo liên kết tới hình ảnh, ta cần hiển thị ảnh trong trang web với thẻ <span style="color:#ab0000">&lt;img&gt;</span><br>
+							Trong đó đường dẫn tới tệp ảnh cũng sử dụng đường dẫn tuyệt đối hoặc đường dẫn tương đối như trên.<br>
+							Ví dụ: Trong trang index.html, ta đặt hình ảnh Mặt Trời được lưu trong tệp có đường dẫn images/sun.png và tạo đường liên kết từ ảnh tới trang thong_tin.html thì đoạn mã có dạng như sau:<br>
+							<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"thong_tin.html"</span><span style="color:#ab0000">&gt;</span><br>
+							<span style="color:#ab0000; margin-left:20px">&lt;img</span> <span style="color:red">src</span>=<span style="color:#5600b0">"images/sun.png"</span><span style="color:#ab0000">&gt;</span><br>
+							<span style="color:#ab0000">&lt;/a&gt;</span>
+						</li>
+					</ul>
+				</div>
+				
+				<div>
+					<p style="font-size:30px; color:#049f0a"><b>III. Thực hành</b></p>
+					<p style="margin-left:10px"><b>Nhiệm vụ 1,2: </b></p>
+					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
+				</div>
+				
+				<div>
+					<p style="font-size:30px; color:#049f0a"><b>IV. Luyện tập</b></p>
+					<p style="margin-left:10px"><b>1. Liên kết quay về trang chủ: </b></p>
+					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/thong_tin.html" style="font-size:20px; text-decoration:none; color:black">thong_tin.html</a></div>
+					<p style="margin-left:10px"><b>2. Viết trang web giới thiệu bản thân: </b></p>
+				</div>
+				
+				<div>
+					<p style="font-size:30px; color:#049f0a"><b>V. Vận dụng</b></p>
+					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
+				</div>
+				<br/>
+			</div>
+			
+			<footer style="background-color:#00c408; height:80px">
+				<div style="display: flex; height:100%">
+					<div style="flex: 1; height:100%; text-align:center">
+						<p style="font-size:22px; font-family:Arial; color:white">Nhóm 3 - Lớp 12 Toán</p>
+					</div>
+					<div style="flex: 3; height:100%; text-align:center">
+						<a style="text-decoration:none" href="../index.html"><p style="font-size:22px; font-family:Arial; color:white">Giới thiệu về nhóm</p></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
