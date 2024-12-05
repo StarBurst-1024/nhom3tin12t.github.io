@@ -4,29 +4,138 @@
 		<meta charset = "utf-8">
 		<title>Bài 9</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
 			.custom-list li::marker {color:#ff5c00;}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#c64801;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#ff5c00; height:125px; text-align:center; border:1px solid; border-color:#ff5c00">
-				<p style="color:white; font-size:40px"><b>BÀI 9: TẠO DANH SÁCH, BẢNG</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#ff5c00; height:125px; text-align:center; border:1px solid; border-color:#ff5c00">
+				<p style="color:white; font-size:40px"><b>BÀI 9: TẠO DANH SÁCH, BẢNG</b></p>
+			</header>
+			
 			<div style="margin:10px; border:1px solid; border-color:#ff5c00">
 			
 				<div>
-					<p style="font-size:30px; color:#c64801"><b>I. Tạo danh sách</b></p>
-					<p style="margin-left:10px"><b>1) Danh sách có hoặc không có thứ tự: </b></p>
-					<p style="margin-left:20px">_ Trong danh sách, các mục được hiển thị tuần tự, kí tự đầu dòng có thể là một số chữ, dấu, kí hiệu hoặc hình ảnh. Cấu trúc của đoạn mã HTML tạo danh sách như sau:</p>
+					<p class="tieude1"><b>I. Tạo danh sách</b></p>
+					<p class="tieude2"><b>1) Danh sách có hoặc không có thứ tự: </b></p>
+					<p>_ Trong danh sách, các mục được hiển thị tuần tự, kí tự đầu dòng có thể là một số chữ, dấu, kí hiệu hoặc hình ảnh. Cấu trúc của đoạn mã HTML tạo danh sách như sau:</p>
 					<div style="line-height:1; width:90%; margin:0 auto; border:1px solid">
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;thẻ bắt đầu&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;li&gt;</span> mục thứ 1 <span style="color:#ab0000">&lt;/li&gt;</span></p>
-						<p style="margin-left:20px">. . .</p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;li&gt;</span> mục thứ n <span style="color:#ab0000">&lt;/li&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;thẻ kết thúc&gt;</span></p>
+						<p><span style="color:#ab0000">&lt;thẻ bắt đầu&gt;</span></p>
+						<p><span style="color:#ab0000">&lt;li&gt;</span> mục thứ 1 <span style="color:#ab0000">&lt;/li&gt;</span></p>
+						<p>. . .</p>
+						<p><span style="color:#ab0000">&lt;li&gt;</span> mục thứ n <span style="color:#ab0000">&lt;/li&gt;</span></p>
+						<p><span style="color:#ab0000">&lt;thẻ kết thúc&gt;</span></p>
 					</div>
-					<p style="margin-left:20px">_ Để tạo <b>danh sách có thứ tự</b>, dùng cặp thẻ <span style="color:#ab0000">&lt;ol&gt;&lt;/ol&gt;</span>. Để chọn kiểu đánh thứ tự và giá trị bắt đầu, dùng thuộc tính type và start: </p>
+					<p>_ Để tạo <b>danh sách có thứ tự</b>, dùng cặp thẻ <span style="color:#ab0000">&lt;ol&gt;&lt;/ol&gt;</span>. Để chọn kiểu đánh thứ tự và giá trị bắt đầu, dùng thuộc tính type và start: </p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5">
 						<li style="font-family:Times New Roman;font-size:20px"><span style="color:red">type</span>: xác định kiểu đánh số. Các kiểu đánh số là: “1”, “A”, “a”,“I” và “i”.</li>
 						<li style="font-family:Times New Roman;font-size:20px"><span style="color:red">start</span>: xác định giá trị bắt đầu đánh số, nhận giá trị là các số nguyên.</li>
@@ -46,7 +155,7 @@
 							<li style="font-family:Times New Roman;font-size:20px">Nếu <b>delta</b> &gt; 0: ...</li>
 						</ol>
 					</div>
-					<p style="margin-left:20px">_ Để tạo <b>danh sách không có thứ tự</b>, dùng cặp thẻ <span style="color:#ab0000">&lt;ul&gt;&lt;/ul&gt;</span>. Để chọn kí tự đầu dòng, ta thiết lập giá trị của đặc tính <span style="color:#5600b0">
+					<p>_ Để tạo <b>danh sách không có thứ tự</b>, dùng cặp thẻ <span style="color:#ab0000">&lt;ul&gt;&lt;/ul&gt;</span>. Để chọn kí tự đầu dòng, ta thiết lập giá trị của đặc tính <span style="color:#5600b0">
 					list-style-type</span> trong thuộc tính <span style="color:red">style</span> bằng một trong 4 giá trị <span style="color:#5600b0">disc, circle, square và none</span>.</p>
 					<div style="line-height:1; width:90%; margin:0 auto; border:1px solid">
 						<p style="margin-left:20px; margin-top:10px; margin-bottom:10px"><span style="color:#ab0000">&lt;ul</span> <span style="color:red">style</span>=<span style="color:#5600b0">"list-style-type:square"</span><span style="color:#ab0000">&gt;</span></p>
@@ -63,8 +172,8 @@
 							<li style="font-family:Times New Roman;font-size:20px">Nếu <b>delta</b> &gt; 0: ...</li>
 						</ul>
 					</div>
-					<p style="margin-left:10px"><b>2) Danh sách mô tả: </b></p>
-					<p style="margin-left:20px">_ Danh sách mô tả dùng để liệt kê các mục kèm với mô tả cho từng mục. Cấu trúc của đoạn mã tạo danh sách mô tả khác cấu trúc của đoạn mã tạo danh sách có 
+					<p class="tieude2"><b>2) Danh sách mô tả: </b></p>
+					<p>_ Danh sách mô tả dùng để liệt kê các mục kèm với mô tả cho từng mục. Cấu trúc của đoạn mã tạo danh sách mô tả khác cấu trúc của đoạn mã tạo danh sách có 
 					thứ tự hoặc không có thứ tự. Để tạo danh sách mô tả, ta dùng ba thẻ <span style="color:#ab0000">&lt;dl&gt;</span>, <span style="color:#ab0000">&lt;dt&gt;</span> và <span style="color:#ab0000">&lt;dd&gt;</span>:</p>
 					<div style="line-height:1; width:90%; margin:0 auto; border:1px solid">
 						<p style="margin-left:20px; margin-top:10px; margin-bottom:10px"><span style="color:#ab0000">&lt;dl&gt;</span></p>
@@ -80,10 +189,10 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#c64801"><b>II. Thiết lập bảng</b></p>
-					<p style="margin-left:20px">_ Phần tử bảng dùng để biểu diễn dữ liệu có cấu trúc dạng bảng. Phần tử bảng được tạo bởi các thẻ chính là <span style="color:#ab0000">&lt;table&gt;</span>, <span style="color:#ab0000">&lt;tr&gt;</span>, 
+					<p class="tieude1"><b>II. Thiết lập bảng</b></p>
+					<p>_ Phần tử bảng dùng để biểu diễn dữ liệu có cấu trúc dạng bảng. Phần tử bảng được tạo bởi các thẻ chính là <span style="color:#ab0000">&lt;table&gt;</span>, <span style="color:#ab0000">&lt;tr&gt;</span>, 
 					<span style="color:#ab0000">&lt;td&gt;</span> và <span style="color:#ab0000">&lt;th&gt;</span>; trình bày bảng bằng thuộc tính <span style="color:red">style</span>.</p>
-					<p style="margin-left:20px">_ Các định dạng cơ bản bao gồm: thêm tiêu đề cho bảng, tạo khung bảng, điều chỉnh kích thước của hàng/cột/ô và gộp ô:</p>
+					<p>_ Các định dạng cơ bản bao gồm: thêm tiêu đề cho bảng, tạo khung bảng, điều chỉnh kích thước của hàng/cột/ô và gộp ô:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5">
 						<li style="font-family:Times New Roman;font-size:20px"><em>Thêm tiêu đề</em>: Sử dụng cặp thẻ <span style="color:#ab0000">&lt;caption&gt;&lt;/caption&gt;</span>, ngay sau thẻ <span style="color:#ab0000">&lt;table&gt;</span> và 
 						trước thẻ <span style="color:#ab0000">&lt;tr&gt;</span> đầu tiên.</li>
@@ -103,8 +212,8 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#c64801"><b>III. Thực hành tạo danh sách và bảng</b></p>
-					<p style="margin-left:10px"><b>Nhiệm vụ 1: </b></p>
+					<p class="tieude1"><b>III. Thực hành tạo danh sách và bảng</b></p>
+					<p class="tieude2"><b>Nhiệm vụ 1: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto">
 						<ul>
 							<li style="list-style-type:disc">THỂ THAO
@@ -137,13 +246,13 @@
 							</li>
 						</ul>
 					</div>
-					<p style="margin-left:10px"><b>Nhiệm vụ 2: </b></p>
+					<p class="tieude2"><b>Nhiệm vụ 2: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#c64801"><b>IV. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1. Sửa lại chương trình trong hình 9.6a: </b></p>
+					<p class="tieude1"><b>IV. Luyện tập</b></p>
+					<p class="tieude2"><b>1. Sửa lại chương trình trong hình 9.6a: </b></p>
 					<table style="margin-left:100px; border:2px solid; font-size:20px">
 						<tr>
 							<th rowspan="2" style="border:2px solid blue">Họ và tên</th>
@@ -155,9 +264,9 @@
 							<td style="border:2px solid green">Hóa học</td>
 						</tr>
 					</table>
-					<p style="margin-left:20px">Mã HTML: </p>
+					<p>Mã HTML: </p>
 					<div style="line-height:0.5; width:90%; margin:0 auto; border:1px solid">
-						<p style="margin-left:20px">&lt;table style="margin-left:100px; border:2px solid; font-size:20px"&gt;</p>
+						<p>&lt;table style="margin-left:100px; border:2px solid; font-size:20px"&gt;</p>
 						<p style="margin-left:40px">	&lt;tr&gt;</p>
 						<p style="margin-left:60px">		&lt;th rowspan="2" style="border:2px solid blue"&gt;Họ và tên&lt;/th&gt;</p>
 						<p style="margin-left:60px">		&lt;th colspan="3" style="border:2px solid blue"&gt;Điểm thi&lt;/th&gt;</p>
@@ -167,36 +276,36 @@
 						<p style="margin-left:60px">		&lt;td style="border:2px solid yellow"&gt;Vật lí&lt;/td&gt;</p>
 						<p style="margin-left:60px">		&lt;td style="border:2px solid green"&gt;Hóa học&lt;/td&gt;</p>
 						<p style="margin-left:40px">	&lt;/tr&gt;</p>
-						<p style="margin-left:20px">&lt;/table&gt;</p>
+						<p>&lt;/table&gt;</p>
 					</div>
 				</div>
 			
 				<div>
-					<p style="font-size:30px; color:#c64801"><b>V. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1. Viết chương trình Python: </b></p>					
+					<p class="tieude1"><b>V. Vận dụng</b></p>
+					<p class="tieude2"><b>1. Viết chương trình Python: </b></p>					
 					<div style="line-height:0.5; width:90%; margin:0 auto; border:1px solid">
-						<p style="margin-left:20px">data_input=[['Nguyễn Tấn Hoàng A',10,9,8], ['Lê Hoàng B', 9, 9.5,8.5], ['Nguyễn Minh C', 9.5,9.5,9]]</p>
-						<p style="margin-left:20px">output_file=open("D:\XAMPP\htdocs\vdungbai9.html","w", encoding="utf-8")</p>
-						<p style="margin-left:20px">content="&lt;table border=\"1\"&gt;\n"</p>
-						<p style="margin-left:20px">content+="""</p>
-						<p style="margin-left:20px">&lt;tr&gt;</p>
-						<p style="margin-left:20px">&lt;th style="border:1px" rowspan="2"&gt;Họ và tên&lt;/th&gt;</p>
-						<p style="margin-left:20px">&lt;th style="border:1px" colspan="3"&gt;Điểm thi&lt;/th&gt;</p>
-						<p style="margin-left:20px">&lt;/tr&gt;</p>
-						<p style="margin-left:20px">&lt;tr&gt;</p>
-						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Toán&lt;/td&gt;</p>
-						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Vật lí&lt;/td&gt;</p>
-						<p style="margin-left:20px">&lt;td style="border:1px"&gt;Hóa học&lt;/td&gt;</p>
-						<p style="margin-left:20px">&lt;/tr&gt;</p>
-						<p style="margin-left:20px">"""</p><br>
-						<p style="margin-left:20px">for dulieu in data input:</p>
+						<p>data_input=[['Nguyễn Tấn Hoàng A',10,9,8], ['Lê Hoàng B', 9, 9.5,8.5], ['Nguyễn Minh C', 9.5,9.5,9]]</p>
+						<p>output_file=open("D:\XAMPP\htdocs\vdungbai9.html","w", encoding="utf-8")</p>
+						<p>content="&lt;table border=\"1\"&gt;\n"</p>
+						<p>content+="""</p>
+						<p>&lt;tr&gt;</p>
+						<p>&lt;th style="border:1px" rowspan="2"&gt;Họ và tên&lt;/th&gt;</p>
+						<p>&lt;th style="border:1px" colspan="3"&gt;Điểm thi&lt;/th&gt;</p>
+						<p>&lt;/tr&gt;</p>
+						<p>&lt;tr&gt;</p>
+						<p>&lt;td style="border:1px"&gt;Toán&lt;/td&gt;</p>
+						<p>&lt;td style="border:1px"&gt;Vật lí&lt;/td&gt;</p>
+						<p>&lt;td style="border:1px"&gt;Hóa học&lt;/td&gt;</p>
+						<p>&lt;/tr&gt;</p>
+						<p>"""</p><br>
+						<p>for dulieu in data input:</p>
 						<p style="margin-left:40px">content+="&lt;tr&gt;"</p>
 						<p style="margin-left:40px">for d in dulieu:</p>
 						<p style="margin-left:60px">content+="""&lt;td style="border:1px solid red"&gt;"""+str(d)+"""&lt;/td&gt;"""</p>
 						<p style="margin-left:40px">content+="&lt;/tr&gt;\n"</p>
-						<p style="margin-left:20px">content+="&lt;/table&gt;"</p>
-						<p style="margin-left:20px">output_file.write(content)</p>
-						<p style="margin-left:20px">output_file.close()</p>
+						<p>content+="&lt;/table&gt;"</p>
+						<p>output_file.write(content)</p>
+						<p>output_file.close()</p>
 					</div>
 				</div>
 				<br>
