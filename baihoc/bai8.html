@@ -4,127 +4,248 @@
 		<meta charset = "utf-8">
 		<title>Bài 8</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
 			li {font-family:Times New Roman;font-size:20px}
 			.custom-list li::marker {color:#8735fe;}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#4e0ab0;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			.rbang1{
+				font-family:Calibri; 
+				font-size:20px;
+				height:50px;
+			}
+			
+			.cbang1{
+				background-color:#3bc9ea; 
+				border-color:#3bc9ea; 
+				padding-left:20px
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}						
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#8735fe; height:125px; text-align:center; border:1px solid; border-color:#8735fe">
-				<p style="color:white; font-size:40px"><b>BÀI 8: ĐỊNH DẠNG VĂN BẢN</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#8735fe; height:125px; text-align:center; border:1px solid; border-color:#8735fe">
+				<p style="color:white; font-size:40px"><b>BÀI 8: ĐỊNH DẠNG VĂN BẢN</b></p>
+			</header>
+			
 			<div style="margin:10px; border:1px solid; border-color:#8735fe">
 			
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>I. Thuộc tính thẻ</b></p>
-					<p style="margin-left:20px">_ Thẻ có thể có hoặc không có thuộc tính. Thuộc tính của thẻ có tác dụng bổ sung thông tin, làm rõ cách xử lí cho thẻ chứa nó.</p>
+					<p class="tieude1"><b>I. Thuộc tính thẻ</b></p>
+					<p>_ Thẻ có thể có hoặc không có thuộc tính. Thuộc tính của thẻ có tác dụng bổ sung thông tin, làm rõ cách xử lí cho thẻ chứa nó.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>II. Các thẻ định dạng trình bày văn bản</b></p>
-					<p style="margin-left:10px"><b>1) Định dạng tiêu đề: </b></p>
-					<p style="margin-left:20px">_ Sử dụng các thẻ dạng <span style="color:#ab0000">&lt;hx&gt;</span> trong đó x nhận một trong các giá trị từ 1 đến 6 để phân cấp tiêu đề theo các mức khác nhau.</p>
-					<p style="margin-left:20px">_ Thẻ <span style="color:#ab0000">&lt;h1&gt;</span> được sử dụng cho tiêu đề chính hay tiêu đề chung của cả văn bản. Các tiêu đề ở mức thấp hơn dùng 
+					<p class="tieude1"><b>II. Các thẻ định dạng trình bày văn bản</b></p>
+					<p class="tieude2"><b>1) Định dạng tiêu đề: </b></p>
+					<p>_ Sử dụng các thẻ dạng <span style="color:#ab0000">&lt;hx&gt;</span> trong đó x nhận một trong các giá trị từ 1 đến 6 để phân cấp tiêu đề theo các mức khác nhau.</p>
+					<p>_ Thẻ <span style="color:#ab0000">&lt;h1&gt;</span> được sử dụng cho tiêu đề chính hay tiêu đề chung của cả văn bản. Các tiêu đề ở mức thấp hơn dùng 
 					thẻ <span style="color:#ab0000">&lt;h2&gt;</span> và tiếp tục với các mức tiếp theo.</p>
-					<p style="margin-left:10px"><b>2) Định dạng đoạn văn bản: </b></p>
-					<p style="margin-left:20px">_ Các đoạn được định dạng bằng thẻ <span style="color:#ab0000">&lt;p&gt;</span> phù hợp với văn bản chứa nhiều chữ.</p>
-					<p style="margin-left:20px">_ Khi cần thao tác với nhiều loại nội dung, ta có thể sử dụng thẻ <span style="color:#ab0000">&lt;div&gt;</span> và thẻ <span style="color:#ab0000">&lt;span&gt;</span></p>
-					<p style="margin-left:20px">_ Phần tử <span style="color:#ab0000">&lt;div&gt;</span> là một khối, bắt đầu trên dòng mới.</p>
-					<p style="margin-left:20px">_ Phần tử <span style="color:#ab0000">&lt;span&gt;</span> có tác dụng tương tự nhưng sử dụng cho quy mô nhỏ hơn, nội dung khối hiển thị trên cùng dòng đang viết</p>
-					<p style="margin-left:20px"><b>Lưu ý:</b> Ngoài các thẻ định dạng đoạn và khối kể trên, còn có hai thẻ <span style="color:#ab0000">&lt;br&gt;</span> và <span style="color:#ab0000">&lt;hr&gt;</span> 
+					<p class="tieude2"><b>2) Định dạng đoạn văn bản: </b></p>
+					<p>_ Các đoạn được định dạng bằng thẻ <span style="color:#ab0000">&lt;p&gt;</span> phù hợp với văn bản chứa nhiều chữ.</p>
+					<p>_ Khi cần thao tác với nhiều loại nội dung, ta có thể sử dụng thẻ <span style="color:#ab0000">&lt;div&gt;</span> và thẻ <span style="color:#ab0000">&lt;span&gt;</span></p>
+					<p>_ Phần tử <span style="color:#ab0000">&lt;div&gt;</span> là một khối, bắt đầu trên dòng mới.</p>
+					<p>_ Phần tử <span style="color:#ab0000">&lt;span&gt;</span> có tác dụng tương tự nhưng sử dụng cho quy mô nhỏ hơn, nội dung khối hiển thị trên cùng dòng đang viết</p>
+					<p><b>Lưu ý:</b> Ngoài các thẻ định dạng đoạn và khối kể trên, còn có hai thẻ <span style="color:#ab0000">&lt;br&gt;</span> và <span style="color:#ab0000">&lt;hr&gt;</span> 
 					để xuống dòng hoặc tạo ra một đường kẻ ngang trên trang web.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>III. Các thẻ định dạng phông chữ</b></p>
-					<p style="margin-left:10px"><b>1) Định dạng kiểu chữ: </b></p>
+					<p class="tieude1"><b>III. Các thẻ định dạng phông chữ</b></p>
+					<p class="tieude2"><b>1) Định dạng kiểu chữ: </b></p>
 					<div>
 						<table style="margin:0 auto; width:85%">
-							<tr style="font-family:Calibri; font-size:20px" height="50px">
-								<th style="background-color:#f7941d; border-color:#f7941d"; width="20%">Kiểu chữ</th>
-								<th style="background-color:#f7941d; border-color:#f7941d"; width="10%">Thẻ</th>
-								<th style="background-color:#f7941d; border-color:#f7941d"; width="35%">Ví dụ</th>
-								<th style="background-color:#f7941d; border-color:#f7941d"; width="20%">Hiển thị trên trình duyệt</th>
+							<tr class="rbang1">
+								<th style="background-color:#f7941d; border-color:#f7941d" width="20%">Kiểu chữ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d" width="10%">Thẻ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d" width="35%">Ví dụ</th>
+								<th style="background-color:#f7941d; border-color:#f7941d" width="20%">Hiển thị trên trình duyệt</th>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ thường</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây là câu chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây là câu chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Chữ thường</td>
+								<td class="cbang1" width="10%"></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây là câu chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây là câu chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ đậm</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;strong&gt;</span>;<span style="color:#ab0000">&lt;b&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;strong&gt;</span>là câu<span style="color:#ab0000">&lt;/strong&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <strong>là câu</strong> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Chữ đậm</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;strong&gt;</span>;<span style="color:#ab0000">&lt;b&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;strong&gt;</span>là câu<span style="color:#ab0000">&lt;/strong&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <strong>là câu</strong> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chữ nghiêng</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;em&gt;</span>;<span style="color:#ab0000">&lt;i&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;em&gt;</span>là câu<span style="color:#ab0000">&lt;/em&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <em>là câu</em> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Chữ nghiêng</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;em&gt;</span>;<span style="color:#ab0000">&lt;i&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;em&gt;</span>là câu<span style="color:#ab0000">&lt;/em&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <em>là câu</em> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Gạch chân</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;u&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;u&gt;</span>là câu<span style="color:#ab0000">&lt;/u&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <u>là câu</u> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Gạch chân</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;u&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;u&gt;</span>là câu<span style="color:#ab0000">&lt;/u&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <u>là câu</u> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đánh dấu</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;mark&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;mark&gt;</span>là câu<span style="color:#ab0000">&lt;/mark&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <mark>là câu</mark> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Đánh dấu</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;mark&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;mark&gt;</span>là câu<span style="color:#ab0000">&lt;/mark&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <mark>là câu</mark> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Giảm cỡ chữ</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;small&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;small&gt;</span>là câu<span style="color:#ab0000">&lt;/small&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <small>là câu</small> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Giảm cỡ chữ</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;small&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;small&gt;</span>là câu<span style="color:#ab0000">&lt;/small&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <small>là câu</small> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Chỉ số trên hoặc dưới</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;sup&gt;</span>;<span style="color:#ab0000">&lt;sub&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;sup&gt;</span>là câu<span style="color:#ab0000">&lt;/sup&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <sup>là câu</sup> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Chỉ số trên hoặc dưới</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;sup&gt;</span>;<span style="color:#ab0000">&lt;sub&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;sup&gt;</span>là câu<span style="color:#ab0000">&lt;/sup&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <sup>là câu</sup> chuẩn</td>
 							</tr>
-							<tr style="font-family:Calibri; font-size:18px" height="50px">
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đánh dấu xóa (bằng nét gạch giữa chữ)</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:#ab0000">&lt;del&gt;</span></td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;del&gt;</span>là câu<span style="color:#ab0000">&lt;/del&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
-								<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%">Đây <del>là câu</del> chuẩn</td>
+							<tr class="rbang1">
+								<td class="cbang1" width="20%">Đánh dấu xóa (bằng nét gạch giữa chữ)</td>
+								<td class="cbang1" width="10%"><span style="color:#ab0000">&lt;del&gt;</span></td>
+								<td class="cbang1" width="35%"><span style="color:#ab0000">&lt;p&gt;</span>Đây <span style="color:#ab0000">&lt;del&gt;</span>là câu<span style="color:#ab0000">&lt;/del&gt;</span> chuẩn<span style="color:#ab0000">&lt;/p&gt;</td>
+								<td class="cbang1" width="20%">Đây <del>là câu</del> chuẩn</td>
 							</tr>
 						</table>
 					</div>
-					<p style="margin-left:20px">Lưu ý: </p>
-					<p style="margin-left:20px">_ HTML5 không hỗ trợ thẻ <span style="color:#ab0000">&lt;big&gt;</span> và <span style="color:#ab0000">&lt;u&gt;</span>.</p>
-					<p style="margin-left:20px">_ Các thẻ <span style="color:#ab0000">&lt;strong&gt;</span>, <span style="color:#ab0000">&lt;em&gt;</span> nhấn mạnh vào ngữ nghĩa của nội dung.</p>
-					<p style="margin-left:10px"><b>2) Định dạng phông chữ: </b></p>
-					<p style="margin-left:20px">_ Để định dạng phông chữ, ta sử dụng thuộc tính style. Các thuộc tính màu sắc, phông chữ, cỡ chữ được xác định như sau:</p>
+					<p>Lưu ý: </p>
+					<p>_ HTML5 không hỗ trợ thẻ <span style="color:#ab0000">&lt;big&gt;</span> và <span style="color:#ab0000">&lt;u&gt;</span>.</p>
+					<p>_ Các thẻ <span style="color:#ab0000">&lt;strong&gt;</span>, <span style="color:#ab0000">&lt;em&gt;</span> nhấn mạnh vào ngữ nghĩa của nội dung.</p>
+					<p class="tieude2"><b>2) Định dạng phông chữ: </b></p>
+					<p>_ Để định dạng phông chữ, ta sử dụng thuộc tính style. Các thuộc tính màu sắc, phông chữ, cỡ chữ được xác định như sau:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5">
 						<li>Màu sắc: <span style="color:#ab0000">&lt;p <span style="color:red">style</span>=<span style="color:#5600b0">"color:<u>màu</u>"</span>&gt;</span>Nội dung.<span style="color:#ab0000">&lt;/p&gt;</span>.</li>
 						<li>Phông chữ: <span style="color:#ab0000">&lt;p <span style="color:red">style</span>=<span style="color:#5600b0">"font-family:<u>tên phông</u>"</span>&gt;</span>Nội dung.<span style="color:#ab0000">&lt;/p&gt;</span>.</li>
 						<li>Cỡ chữ: <span style="color:#ab0000">&lt;p <span style="color:red">style</span>=<span style="color:#5600b0">"font-size:<u>cỡ</u>"</span>&gt;</span>Nội dung.<span style="color:#ab0000">&lt;/p&gt;</span>. Có nhiều cách xác định cỡ chữ: dùng số kèm đơn vị (px-pixel, mm, cm,...) hoặc cỡ chữ thông dụng (small, medium, large,...).</li>
 					</ul>
-					<p style="margin-left:20px">Lưu ý:</p>
-					<p style="margin-left:20px">_ Giá trị màu sắc được sử dụng theo tiếng Anh: red, green, white,... hoặc giá trị màu trong hệ RGB: rgb(205,0,0), rgb(255,255,255),... hoặc các giá trị màu theo hệ 
+					<p>Lưu ý:</p>
+					<p>_ Giá trị màu sắc được sử dụng theo tiếng Anh: red, green, white,... hoặc giá trị màu trong hệ RGB: rgb(205,0,0), rgb(255,255,255),... hoặc các giá trị màu theo hệ 
 					thập lục phân: #8735FE, #3575AB,... .</p>
-					<p style="margin-left:20px">_ Khi muốn thực hiện nhiều định dạng đồng thời, ta ngăn cách các cặp tên:giá trị với nhau bởi dấu “;”.</p>
+					<p>_ Khi muốn thực hiện nhiều định dạng đồng thời, ta ngăn cách các cặp tên:giá trị với nhau bởi dấu “;”.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>IV. Thực hành</b></p>
+					<p class="tieude1"><b>IV. Thực hành</b></p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>V. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1. Sửa lại phần tử sau để làm nổi bật ý chính của câu: </b></p>
+					<p class="tieude1"><b>V. Luyện tập</b></p>
+					<p class="tieude2"><b>1. Sửa lại phần tử sau để làm nổi bật ý chính của câu: </b></p>
 					<div style="border:1px solid; width:90%; margin:0 auto">
 						<p style="margin-left:15px; font-family:Tahoma"><span style="color:#ab0000">&lt;p&gt;</span>Thẻ <span style="color:#ab0000">strong</span> và thẻ <span style="color:#ab0000">em</span> được sử dụng để nhấn 
 						mạnh vào nội dung trong phần tử. Thẻ <span style="color:#ab0000">b</span> chỉ có tác dụng in đậm văn bản<span style="color:#ab0000">&lt;/p&gt;</span></p>
 					</div>
-					<p style="margin-left:20px">Sau khi sửa: </p>
+					<p>Sau khi sửa: </p>
 					<div style="border:1px solid; width:90%; margin:0 auto">
 						<p style="margin-left:15px; font-family:Tahoma"><span style="color:#ab0000">&lt;p&gt;</span>Thẻ <span style="color:#ab0000">strong</span> và thẻ <span style="color:#ab0000">em</span> 
 						được sử dụng để <span style="color:#ab0000">&lt;strong&gt;</span>nhấn mạnh vào nội dung<span style="color:#ab0000">&lt;/strong&gt;</span> trong phần tử. Thẻ <span style="color:#ab0000">b</span> 
@@ -135,7 +256,7 @@
 						<p style="margin-left:15px; font-family:Tahoma">Thẻ <span style="color:#ab0000">strong</span> và thẻ <span style="color:#ab0000">em</span> được sử dụng để <strong>nhấn mạnh vào nội dung</strong> trong 
 						phần tử. Thẻ <span style="color:#ab0000">b</span> chỉ có tác dụng <strong>in đậm</strong> văn bản</p>
 					</div>
-					<p style="margin-left:10px"><b>2. Trình bài đoạn văn bản sau bằng HTML: </b></p>
+					<p class="tieude2"><b>2. Trình bài đoạn văn bản sau bằng HTML: </b></p>
 					<div style="border:1px solid; width:90%; margin:0 auto">
 						<p style="margin-left:15px; font-family:Tahoma">INTERNET TỐC ĐỘ CAO</p>
 						<p style="margin-left:15px; font-family:Tahoma"><em>Dịch vụ Internet tốc độ cao là dịch vụ Internet cáp quang chất lượng cao, ổn định, giá cả hợp lí.</em></p>
@@ -170,8 +291,8 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#4e0ab0"><b>VI. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1. Các bước để sử dụng một màu cụ thể trong bức tranh làm màu cho tiêu đề bài thơ: </b></p>
+					<p class="tieude1"><b>VI. Vận dụng</b></p>
+					<p class="tieude2"><b>1. Các bước để sử dụng một màu cụ thể trong bức tranh làm màu cho tiêu đề bài thơ: </b></p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5;list-style-type:square">
 						<li><b>Bước 1: </b>Mở hình ảnh bằng những phần mềm chỉnh sửa ảnh.</li>
 						<li><b>Bước 2: </b>Ở công cụ chọn màu trên phần mềm, chọn Eyedropper.</li>
@@ -182,13 +303,13 @@
 							<span style="color:#ab0000">&gt;</span>Tiêu đề<span style="color:#ab0000">&lt;/h1&gt;<span></p>
 						</li>
 					</ul>
-					<p style="margin-left:10px"><b>2. Hãy đưa ra cách định dạng một đoạn văn bản để được kết quả sau: </b></p>
+					<p class="tieude2"><b>2. Hãy đưa ra cách định dạng một đoạn văn bản để được kết quả sau: </b></p>
 					<div style="border:1px solid; width:90%; margin:0 auto; text-align:center">
 						<p style="margin-left:15px; margin-top:15px; margin-bottom:15px; font-size:50px">0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0<sup>0<sup>0<sup>0<sup>0</sup>0</sup>0</sup>0</sup>0</p>
 					</div>
 					<br>
 					<div style="line-height:0.5; width:90%; margin:0 auto; border:1px solid">
-						<p style="margin-left:20px">&lt;p style="font-size:50px"&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
+						<p style="margin-left:20px-">&lt;p style="font-size:50px"&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
 						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
 						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;</p>
 						<p style="margin-left:240px">0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/sup&gt;0&lt;/p&gt;</p>
