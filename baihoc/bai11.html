@@ -4,35 +4,144 @@
 		<meta charset = "utf-8">
 		<title>Bài 11</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
 			li {font-family:Times New Roman;font-size:20px}
 			.custom-list li::marker {color:#f6c000;}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#d6a700;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#f6c000; height:125px; text-align:center; border:1px solid; border-color:#f6c000">
-				<p style="color:white; font-size:40px"><b>BÀI 11: CHÈN TỆP TIN ĐA PHƯƠNG TIỆN VÀ KHUNG NỘI TUYẾN VÀO TRANG WEB</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#f6c000; height:125px; text-align:center; border:1px solid; border-color:#f6c000">
+				<p style="color:white; font-size:40px"><b>BÀI 11: CHÈN TỆP TIN ĐA PHƯƠNG TIỆN VÀ KHUNG NỘI TUYẾN VÀO TRANG WEB</b></p>
+			</header>
+			
 			<div style="margin:10px; border:1px solid; border-color:#f6c000">
 			
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>I. Chèn tệp ảnh vào trang web</b></p>
-					<p style="margin-left:20px">_ Hình ảnh làm cho các trang web trở nên sinh động hơn. Chúng có thể được nhúng trực tiếp vào nội dung hoặc làm hình nền. Bài viết này hướng dẫn cách chèn ảnh vào nội dung trang web bằng thẻ 
+					<p class="tieude1"><b>I. Chèn tệp ảnh vào trang web</b></p>
+					<p>_ Hình ảnh làm cho các trang web trở nên sinh động hơn. Chúng có thể được nhúng trực tiếp vào nội dung hoặc làm hình nền. Bài viết này hướng dẫn cách chèn ảnh vào nội dung trang web bằng thẻ 
 					<span style="color:#ab0000">&lt;img&gt;</span>.</p>
-					<p style="margin-left:20px">_ Để hiển thị trên web, các tệp ảnh cần có định dạng được trình duyệt hỗ trợ, như PNG, JPEG, GIF hoặc các định dạng mới như JPEG-XR, WebP. Các định dạng khác như TIFF, EPS cần chuyển đổi sang định dạng 
+					<p>_ Để hiển thị trên web, các tệp ảnh cần có định dạng được trình duyệt hỗ trợ, như PNG, JPEG, GIF hoặc các định dạng mới như JPEG-XR, WebP. Các định dạng khác như TIFF, EPS cần chuyển đổi sang định dạng 
 					được hỗ trợ.</p>
-					<p style="margin-left:20px">_ Thẻ <span style="color:#ab0000">&lt;img&gt;</span> là thẻ đơn, dùng để chèn ảnh vào trang web. Khi trình duyệt gặp thẻ <span style="color:#ab0000">&lt;img&gt;</span>, nó hiểu rằng cần đặt một hình ảnh 
+					<p>_ Thẻ <span style="color:#ab0000">&lt;img&gt;</span> là thẻ đơn, dùng để chèn ảnh vào trang web. Khi trình duyệt gặp thẻ <span style="color:#ab0000">&lt;img&gt;</span>, nó hiểu rằng cần đặt một hình ảnh 
 					vào vị trí đó. Hình ảnh có thể chèn ngay trong dòng văn bản mà không tạo ra ngắt dòng.</p>
-					<p style="margin-left:20px">_ Khi sử dụng thẻ <span style="color:#ab0000">&lt;img&gt;</span>, trình duyệt phải tải ảnh trước khi hiển thị trên trang web. Do đó, cần chú ý đến dung lượng tệp hình ảnh, vì dung lượng lớn có thể gây 
+					<p>_ Khi sử dụng thẻ <span style="color:#ab0000">&lt;img&gt;</span>, trình duyệt phải tải ảnh trước khi hiển thị trên trang web. Do đó, cần chú ý đến dung lượng tệp hình ảnh, vì dung lượng lớn có thể gây 
 					khó khăn cho việc hiển thị nếu tốc độ mạng chậm.</p>
-					<p style="margin-left:20px">_ Thuộc tính <span style="color:red>">src</span> của thẻ <span style="color:#ab0000">&lt;img&gt;</span> là bắt buộc, dùng để chỉ đường dẫn tới tệp ảnh. Ngoài ra, thuộc tính 
+					<p>_ Thuộc tính <span style="color:red>">src</span> của thẻ <span style="color:#ab0000">&lt;img&gt;</span> là bắt buộc, dùng để chỉ đường dẫn tới tệp ảnh. Ngoài ra, thuộc tính 
 					<span style="color:red>">alt</span> cũng quan trọng và nên sử dụng để cung cấp văn bản thay thế khi ảnh không hiển thị được. Văn bản thay thế giúp người đọc hình dung nội dung bức ảnh. Đoạn mã để chèn ảnh có thể như sau:<br>
 					<span style="color:#ab0000">&lt;img</span> <span style="color:red">src</span>=<span style="color:#5600b0">"đường_dẫn_tới_tệp_ảnh"</span> <span style="color:red">alt</span>=<span style="color:#5600b0">"đoạn_văn_bản_thay_thế"</span><span style="color:#ab0000">&gt;</span></p>
-					<p style="margin-left:20px">_ Để thiết lập kích thước cho ảnh ta sử dụng các thuộc tính <span style="color:red">width</span>, <span style="color:red">height</span> cho thẻ <span style="color:#ab0000">&lt;img&gt;</span>. Kích thước 
+					<p>_ Để thiết lập kích thước cho ảnh ta sử dụng các thuộc tính <span style="color:red">width</span>, <span style="color:red">height</span> cho thẻ <span style="color:#ab0000">&lt;img&gt;</span>. Kích thước 
 					được đặt có thể là theo tỉ lệ với khối bao ngoài đối tượng (%) hoặc theo số điểm ảnh (px). Nếu chỉ sử dụng một trong hai thuộc tính (<span style="color:red">width</span> hoặc <span style="color:red">height</span>), chiều còn lại sẽ 
 					được tính toán để hiện thị theo tỉ lệ ảnh gốc.</p>
-					<p style="margin-left:20px">_ Ví dụ:</p>
+					<p>_ Ví dụ:</p>
 					<div style="display:flex">
 						<div style="margin:0 auto; width:40%">
 							<img src="../anh/bai11_sgk_62.png" alt="Sách giáo khoa tin học bài 11-1" width="90%" style="max-height:700px; max-width:525px;  border:1px solid">
@@ -48,11 +157,11 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>II. Chèn âm thanh và video vào trang web</b></p>
-					<p style="margin-left:20px">_ Để chèn video hoặc âm thanh vào trang web, sử dụng thẻ <span style="color:#ab0000">&lt;video&gt;</span> và <span style="color:#ab0000">&lt;audio&gt;</span>. Các định dạng tệp phổ biến nhất cho video là 
+					<p class="tieude1"><b>II. Chèn âm thanh và video vào trang web</b></p>
+					<p>_ Để chèn video hoặc âm thanh vào trang web, sử dụng thẻ <span style="color:#ab0000">&lt;video&gt;</span> và <span style="color:#ab0000">&lt;audio&gt;</span>. Các định dạng tệp phổ biến nhất cho video là 
 					mp4 và webm, và cho âm thanh là mp3, wav, và ogg..</p>
-					<p style="margin-left:20px">_ Cách sử dụng thẻ như sau:</p>
-					<p style="margin-left:20px"><span style="color:#ab0000">&lt;video[audio]</span> <span style="color:red">thuộc_tính</span>=<span style="color:#5600b0">"giá_trị_thuộc_tính"</span><span style="color:#ab0000">&gt;&lt;/video[audio]&gt;</span></p>
+					<p>_ Cách sử dụng thẻ như sau:</p>
+					<p><span style="color:#ab0000">&lt;video[audio]</span> <span style="color:red">thuộc_tính</span>=<span style="color:#5600b0">"giá_trị_thuộc_tính"</span><span style="color:#ab0000">&gt;&lt;/video[audio]&gt;</span></p>
 					<p style="margin-left:20px; margin-bottom:0px">_ Các thuộc tính cơ bản của thẻ <span style="color:#ab0000">&lt;video&gt;</span> và <span style="color:#ab0000">&lt;audio&gt;</span> bao gồm <span style="color:red">src</span>, 
 					<span style="color:red">width</span>, <span style="color:red">height</span>. Các thuộc tính khác như:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
@@ -62,52 +171,52 @@
 						<li><span style="color:red">autoplay</span>: Cho phép trình duyệt chạy video ngay khi hiển thị.</li>
 						<li><span style="color:red">poster</span>: Cung cấp đường dẫn đến tệp ảnh hiển thị khi chưa chạy video.</li>
 					</ul>
-					<p style="margin-left:20px">_ Thẻ <span style="color:#ab0000">&lt;audio&gt;</span> không có thuộc tính <span style="color:red">width</span>, <span style="color:red">height</span>, và <span style="color:red">poster</span>.</p>
-					<p style="margin-left:20px">_ Nếu có nhiều định dạng video hoặc âm thanh, sử dụng thẻ <span style="color:#ab0000">&lt;source&gt;</span> trong cặp thẻ <span style="color:#ab0000">&lt;video&gt;</span> hoặc 
+					<p>_ Thẻ <span style="color:#ab0000">&lt;audio&gt;</span> không có thuộc tính <span style="color:red">width</span>, <span style="color:red">height</span>, và <span style="color:red">poster</span>.</p>
+					<p>_ Nếu có nhiều định dạng video hoặc âm thanh, sử dụng thẻ <span style="color:#ab0000">&lt;source&gt;</span> trong cặp thẻ <span style="color:#ab0000">&lt;video&gt;</span> hoặc 
 					<span style="color:#ab0000">&lt;audio&gt;</span> để trình duyệt tự động tìm và hiển thị tệp tin phù hợp.</p>
-					<p style="margin-left:20px">_ Ví dụ:</p>
+					<p>_ Ví dụ:</p>
 					<div style="border:1px solid; width:90%; margin:0 auto">
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;video</span> <span style="color:red">width</span>=<span style="color:#5600b0">"300"</span> <span style="color:red">height</span>=<span style="color:#5600b0">"240"</span>
+						<p><span style="color:#ab0000">&lt;video</span> <span style="color:red">width</span>=<span style="color:#5600b0">"300"</span> <span style="color:red">height</span>=<span style="color:#5600b0">"240"</span>
 						<span style="color:red">controls</span><span style="color:#ab0000">&gt;</span></p>
 						<p style="margin-left:40px"><span style="color:#ab0000">&lt;source</span> <span style="color:red">src</span>=<span style="color:#5600b0">"movie.mp4"</span> <span style="color:red">type</span>=<span style="color:#5600b0">"video/mp4"</span>&gt;</span></p>
 						<p style="margin-left:40px"><span style="color:#ab0000">&lt;source</span> <span style="color:red">src</span>=<span style="color:#5600b0">"movie.ogg"</span> <span style="color:red">type</span>=<span style="color:#5600b0">"video/ogg"</span>&gt;</span></p>
 						<p style="margin-left:40px">	Trình duyệt của bạn không hỗ trợ <span style="color:#ab0000">HTML</span> video</p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;/video&gt;</span></p>
+						<p><span style="color:#ab0000">&lt;/video&gt;</span></p>
 					</div>
 					
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>III. Tạo khung nội tuyến trong trang web</b></p>
-					<p style="margin-left:20px">_ Khung nội tuyến là một khung nhìn chứa tài nguyên web khác trong trang web hiện tại, được tạo bằng thẻ <span style="color:#ab0000">&lt;iframe&gt;</span> (inline frame). Thẻ này thường được sử dụng để 
+					<p class="tieude1"><b>III. Tạo khung nội tuyến trong trang web</b></p>
+					<p>_ Khung nội tuyến là một khung nhìn chứa tài nguyên web khác trong trang web hiện tại, được tạo bằng thẻ <span style="color:#ab0000">&lt;iframe&gt;</span> (inline frame). Thẻ này thường được sử dụng để 
 					chèn nội dung từ YouTube, Google Maps hoặc để chèn quảng cáo.</p>
-					<p style="margin-left:20px">_ Các thuộc tính thường dùng của thẻ <span style="color:#ab0000">&lt;iframe&gt;</span> gồm:</p>
+					<p>_ Các thuộc tính thường dùng của thẻ <span style="color:#ab0000">&lt;iframe&gt;</span> gồm:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
 						<li><span style="color:red">src</span>: Đường dẫn tới nội dung hiển thị trong khung.</li>
 						<li><span style="color:red">width</span>, <span style="color:red">height</span>: Chiều rộng vào chiều cao của khung nội tuyến.</li>
 					</ul>
-					<p style="margin-left:20px"><b>Lưu ý:</b> Các phần tử <span style="color:#ab0000">&lt;iframe&gt;</span> thường dùng kết hợp với thẻ <span style="color:#ab0000">&lt;a&gt;</span> để tạo liên kết và hiển thị nội dung bằng cách thêm 
+					<p><b>Lưu ý:</b> Các phần tử <span style="color:#ab0000">&lt;iframe&gt;</span> thường dùng kết hợp với thẻ <span style="color:#ab0000">&lt;a&gt;</span> để tạo liên kết và hiển thị nội dung bằng cách thêm 
 					thuộc tính <span style="color:red">target</span> cho thẻ <span style="color:#ab0000">&lt;a&gt;</span> để chỉ định nơi mở tài liệu được liên kết.</p>
-					<p style="margin-left:20px">_ Ví dụ:</p>
+					<p>_ Ví dụ:</p>
 					<div style="line-height:0.2">
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai7.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai7.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 7<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai8.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai8.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 8<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai9.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai9.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 9<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai10.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai10.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 10<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai11.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai11.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 11<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai12.html"</span> 
+						<p><span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"bai12.html"</span> 
 						<span style="color:red">target</span>=<span style="color:#5600b0">"iframe"</span><span style="color:#ab0000">&gt;</span>Bài 12<span style="color:#ab0000">&lt;/a&gt;</span></p>
-						<p style="margin-left:20px"><span style="color:#ab0000">&lt;iframe</span> <span style="color:red">name</span>=<span style="color:#5600b0">"iframe"</span> <span style="color:red">src</span>=<span style="color:#5600b0">"../index.html"</span> 
+						<p><span style="color:#ab0000">&lt;iframe</span> <span style="color:red">name</span>=<span style="color:#5600b0">"iframe"</span> <span style="color:red">src</span>=<span style="color:#5600b0">"../index.html"</span> 
 						<span style="color:red">width</span>=<span style="color:#5600b0">"600"</span> <span style="color:red">height</span>=<span style="color:#5600b0">"600"</span><span style="color:#ab0000">&gt;&lt;/iframe&gt;</span></p>
 						<p style="margin-left:80px"><a href="bai7.html" style="text-decoration:none; color:black" target="iframe">Bài 7</a></p>
 						<p style="margin-left:80px"><a href="bai8.html" style="text-decoration:none; color:black" target="iframe">Bài 8</a></p>
 						<p style="margin-left:80px"><a href="bai9.html" style="text-decoration:none; color:black" target="iframe">Bài 9</a></p>
-						<p style="margin-left:80px"><a href="bai10html" style="text-decoration:none; color:black" target="iframe">Bài 10</a></p>
+						<p style="margin-left:80px"><a href="bai10.html" style="text-decoration:none; color:black" target="iframe">Bài 10</a></p>
 						<p style="margin-left:80px"><a href="bai11.html" style="text-decoration:none; color:black" target="iframe">Bài 11</a></p>
 						<p style="margin-left:80px"><a href="bai12.html" style="text-decoration:none; color:black" target="iframe">Bài 12</a></p>
 						<iframe style="display: block; margin:0 auto" name="iframe" src ="../index.html" width="70%" height="600"></iframe>
@@ -115,24 +224,24 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>IV. Thực hành</b></p>
+					<p class="tieude1"><b>IV. Thực hành</b></p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>V. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1. Tính kích thước ảnh: </b></p>
-					<p style="margin-left:20px">_ Từ kích thước gốc ta tính được tỉ lệ ảnh là 8:5.</p>
-					<p style="margin-left:20px">_ Do câu lệnh chỉ thay đổi 1 chiều nên tỉ lệ ảnh không đồi.</p>
-					<p style="margin-left:20px">_ Từ đó ta tính được chiều cao ảnh là 600/8 *5 = 375px.</p>
-					<p style="margin-left:20px">_ Vậy kích thước ảnh trong trang web là 600 x 375 pixel.</p>
-					<p style="margin-left:10px"><b>2. Chèn ảnh vào trang web giới thiệu bản thân: </b></p>
+					<p class="tieude1"><b>V. Luyện tập</b></p>
+					<p class="tieude2"><b>1. Tính kích thước ảnh: </b></p>
+					<p>_ Từ kích thước gốc ta tính được tỉ lệ ảnh là 8:5.</p>
+					<p>_ Do câu lệnh chỉ thay đổi 1 chiều nên tỉ lệ ảnh không đồi.</p>
+					<p>_ Từ đó ta tính được chiều cao ảnh là 600/8 *5 = 375px.</p>
+					<p>_ Vậy kích thước ảnh trong trang web là 600 x 375 pixel.</p>
+					<p class="tieude2"><b>2. Chèn ảnh vào trang web giới thiệu bản thân: </b></p>
 					<iframe style="display: block; margin:0 auto" name="iframe" src ="../index.html" width="70%" height="600"></iframe>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#d6a700"><b>VI. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1. Tạo khung nội tuyến liên kết đến bài hát yêu thích: </b></p>
-					<p style="margin-left:20px"><a href="../profile/profile_minhtam.html" style="text-decoration:none; color:black; margin-left:10px">Nguyễn Minh Tâm</a></p>
+					<p class="tieude1"><b>VI. Vận dụng</b></p>
+					<p class="tieude2"><b>1. Tạo khung nội tuyến liên kết đến bài hát yêu thích: </b></p>
+					<p><a href="profile/profile_minhtam.html" style="text-decoration:none; color:black; margin-left:10px">Nguyễn Minh Tâm</a></p>
 				</div>
 				<br>
 			</div>
