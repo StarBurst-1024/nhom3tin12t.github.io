@@ -4,24 +4,133 @@
 		<meta charset = "utf-8">
 		<title>Bài 10</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
 			li {font-family:Times New Roman;font-size:20px}
 			.custom-list li::marker {color:#00c408;}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#049f0a;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#00c408; height:125px; text-align:center; border:1px solid; border-color:#00c408">
-				<p style="color:white; font-size:40px"><b>BÀI 10: TẠO LIÊN KẾT</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#00c408; height:125px; text-align:center; border:1px solid; border-color:#00c408">
+				<p style="color:white; font-size:40px"><b>BÀI 10: TẠO LIÊN KẾT</b></p>
+			</header>
+
 			<div style="margin:10px; border:1px solid; border-color:#00c408">
 			
 				<div>
-					<p style="font-size:30px; color:#049f0a"><b>I. Siêu văn bản và đường dẫn</b></p>
-					<p style="margin-left:20px">_ Siêu văn bản (hypertext) là loại văn bản mà nội dung của nó không chỉ chứa văn bản mà còn có thể chứa nhiều dạng dữ liệu khác như âm thanh, hình ảnh,... và đặc biệt là chứa các siêu liên kết (hyperlink) 
+					<p class="tieude1"><b>I. Siêu văn bản và đường dẫn</b></p>
+					<p>_ Siêu văn bản (hypertext) là loại văn bản mà nội dung của nó không chỉ chứa văn bản mà còn có thể chứa nhiều dạng dữ liệu khác như âm thanh, hình ảnh,... và đặc biệt là chứa các siêu liên kết (hyperlink) 
 					tới siêu văn bản khác.</p>
-					<p style="margin-left:20px">_ Siêu liên kết (còn gọi tắt là liên kết) là một tham chiếu để liên kết tới siêu văn bản khác.</p>
-					<p style="margin-left:20px">_ Thẻ <span style="color:#ab0000">&lt;a&gt;</span> dùng cho các liên kết, có cấu trúc chung:<br>
+					<p>_ Siêu liên kết (còn gọi tắt là liên kết) là một tham chiếu để liên kết tới siêu văn bản khác.</p>
+					<p>_ Thẻ <span style="color:#ab0000">&lt;a&gt;</span> dùng cho các liên kết, có cấu trúc chung:<br>
 					<span style="color:#ab0000">&lt;a</span> <span style="color:red">href</span>=<span style="color:#5600b0">"URL"</span><span style="color:#ab0000">&gt;</span>Nội dung hiển thị tại vị trí đặt liên kết<span style="color:#ab0000">&lt;/a&gt;</span>
 					</p>
 					<p style="margin-left:20px; margin-bottom:0px">_ Có 2 loại URL:</p>
@@ -34,12 +143,12 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#049f0a"><b>II. Các cách tạo liên kết tới một trang web</b></p>
-					<p style="margin-left:10px"><b>1) Liên kết tới một trang web khác: </b></p>
-					<p style="margin-left:20px">_ Liên kết từ một trang web tới một trang web khác trên Internet được gọi là liên kết ngoài. Để tạo liên kết ngoài, ta sử dụng thẻ <span style="color:#ab0000">&lt;a&gt;</span> và truyền đường dẫn tuyệt 
+					<p class="tieude1"><b>II. Các cách tạo liên kết tới một trang web</b></p>
+					<p class="tieude2"><b>1) Liên kết tới một trang web khác: </b></p>
+					<p>_ Liên kết từ một trang web tới một trang web khác trên Internet được gọi là liên kết ngoài. Để tạo liên kết ngoài, ta sử dụng thẻ <span style="color:#ab0000">&lt;a&gt;</span> và truyền đường dẫn tuyệt 
 					đối cho thuộc tính <span style="color:red">href</span>.</p>
-					<p style="margin-left:10px"><b>2) Liên kế đến mọt vị trí khác trong cùng website: </b></p>
-					<p style="margin-left:20px">_ Trong lập trình web, phần lớn các liên kết được sử dụng là liên kết trỏ tới các trang trong website của mình.</p>
+					<p class="tieude2"><b>2) Liên kế đến mọt vị trí khác trong cùng website: </b></p>
+					<p>_ Trong lập trình web, phần lớn các liên kết được sử dụng là liên kết trỏ tới các trang trong website của mình.</p>
 					<p style="margin-left:20px; margin-bottom:0px">_ Các trường hợp liên kết web: </p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
 						<li>
@@ -84,20 +193,20 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#049f0a"><b>III. Thực hành</b></p>
-					<p style="margin-left:10px"><b>Nhiệm vụ 1,2: </b></p>
+					<p class="tieude1"><b>III. Thực hành</b></p>
+					<p class="tieude2"><b>Nhiệm vụ 1,2: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#049f0a"><b>IV. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1. Liên kết quay về trang chủ: </b></p>
+					<p class="tieude1"><b>IV. Luyện tập</b></p>
+					<p class="tieude2"><b>1. Liên kết quay về trang chủ: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/thong_tin.html" style="font-size:20px; text-decoration:none; color:black">thong_tin.html</a></div>
-					<p style="margin-left:10px"><b>2. Viết trang web giới thiệu bản thân: </b></p>
+					<p class="tieude2"><b>2. Viết trang web giới thiệu bản thân (Xem profile từng thành viên) </b></p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#049f0a"><b>V. Vận dụng</b></p>
+					<p class="tieude1"><b>V. Vận dụng</b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto; text-align:center"><a href="../thuchanh/CLB.html" style="font-size:20px; text-decoration:none; color:black">CLB.html</a></div>
 				</div>
 				<br/>
