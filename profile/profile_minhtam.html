@@ -5,9 +5,100 @@
 		<title>Nguyễn Minh Tâm</title>
 		<style>
 			p {font-family:Times New Roman; font-size:20px; margin-left:20px; margin-right:20px; margin-top:10px}
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}
 		</style>
 	</head>
-	<body>
+	<body style="margin:0">
+		<div id="header" style="height:253px; margin-bottom:5px">
+			<div style="display:flex; align-items:center; justify-content: space-evenly">
+				<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0px"></a>
+				<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+			</div>
+			<nav>
+				<ul id="menu">
+					<li><a href="../index.html">Trang chủ</a></li>
+					<li><a>Profile thành viên</a>
+						<ul class="submenupf">
+							<li><a href="profile_quocan.html">Phan Quốc Ân</a></li>
+							<li><a href="profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+							<li><a href="profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+							<li><a href="profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+							<li><a href="profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+						</ul>
+					</li>
+					<li><a>Bài học</a>
+						<ul class="submenupf">
+							<li><a href="../baihoc/bai7.html">Bài 7</a></li>
+							<li><a href="../baihoc/bai8.html">Bài 8</a></li>
+							<li><a href="../baihoc/bai9.html">Bài 9</a></li>
+							<li><a href="../baihoc/bai10.html">Bài 10</a></li>
+							<li><a href="../baihoc/bai11.html">Bài 11</a></li>
+							<li><a href="../baihoc/bai12.html">Bài 12</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<div style="display: flex; height:600px">
 			<div style="height:90%; text-align:center">
 				<img src="../anh/profile_avatar_mt.png" style="height:100%; border:2px solid" alt="Ảnh đại diện - Nguyễn Minh Tâm">
