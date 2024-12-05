@@ -4,69 +4,181 @@
 		<meta charset = "utf-8">
 		<title>Bài 7</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
+			img{
+				border: 2px solid black; 
+				margin-left:20px;
+			}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#0f46bc;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}			
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#3575fe; height:125px; text-align:center; border:1px solid; border-color:#3575fe">
-				<p style="color:white; font-size:40px"><b>BÀI 7: HTML VÀ CẤU TRÚC TRANG WEB</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#3575fe; height:125px; text-align:center; border:1px solid; border-color:#3575fe">
+				<p style="color:white; font-size:40px"><b>BÀI 7: HTML VÀ CẤU TRÚC TRANG WEB</b></p>
+			</header>
+			
 			<div style="margin:10px; border:1px solid; border-color:#3575fe">
 			
 				<div>
-					<p style="font-size:30px; color:#0f46bc"><b>I. Trang web và HTML</b></p>
-					<p style="margin-left:10px"><b>1) Thẻ đánh dấu HTML</b></p>
-					<p style="margin-left:20px">_ Trang web được thiết lập theo một ngôn ngữ có cấu trúc đặc biệt gọi là ngôn ngữ đánh dấu siêu văn bản HTML.</p>
-					<p style="margin-left:20px">_ Các thẻ được viết trong cặp dấu “<”, “>”. Thông thường mỗi thẻ bao gồm thẻ bắt đầu và thẻ kết thúc, chỉ ra phạm vi tác dụng của thẻ.</p>
-					<p style="margin-left:10px"><b>2) Phần tử HTML</b></p>
-					<p style="margin-left:20px">_ Các tệp HTML là tệp văn bản được cấu tạo từ các phần tử HTML. Mỗi phần tử HTML gồm nội dung được đánh dấu bởi các thẻ (HTML tag) có tính năng điều khiển hoặc định dạng nội dung. 
-					Trình duyệt có chức năng hiển thị nội dung trang web theo đúng định dạng được thiết lập.</p>
+					<p class="tieude1"><b>I. Trang web và HTML</b></p>
+					<p class="tieude2"><b>1) Thẻ đánh dấu HTML</b></p>
+					<p>_ Trang web được thiết lập theo một ngôn ngữ có cấu trúc đặc biệt gọi là ngôn ngữ đánh dấu siêu văn bản HTML.</p>
+					<p>_ Các thẻ được viết trong cặp dấu “<”, “>”. Thông thường mỗi thẻ bao gồm thẻ bắt đầu và thẻ kết thúc, chỉ ra phạm vi tác dụng của thẻ.</p>
+					<p class="tieude2"><b>2) Phần tử HTML</b></p>
+					<p>_ Các tệp HTML là tệp văn bản được cấu tạo từ các phần tử HTML. Mỗi phần tử HTML gồm nội dung được đánh dấu bởi các thẻ (HTML tag) có tính năng điều khiển hoặc định dạng nội dung. Trình duyệt có chức năng hiển thị nội dung trang 
+					web theo đúng định dạng được thiết lập.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#0f46bc"><b>II. Cấu trúc cơ bản của một tệp HTML</b></p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;!DOCTYPE html&gt;</span> : Dòng này thông báo cho trình duyệt biết đây là tệp văn bản HTML.</p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;html&gt;</span></span> : Phần tử gốc chứa toàn bộ nội dung HTML của trang web, bao 
-					gồm <span style="color:#ab0000">&lt;head&gt; và <span style="color:#ab0000">&lt;body&gt;</p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;head&gt;</span> : Chứa các thông tin chung cho trang web như <span style="color:#ab0000">&lt;title&gt;</span>, 
+					<p class="tieude1"><b>II. Cấu trúc cơ bản của một tệp HTML</b></p>
+					<p> <span style="color:#ab0000">&lt;!DOCTYPE html&gt;</span> : Dòng này thông báo cho trình duyệt biết đây là tệp văn bản HTML.</p>
+					<p> <span style="color:#ab0000">&lt;html&gt;</span></span> : Phần tử gốc chứa toàn bộ nội dung HTML của trang web, bao gồm <span style="color:#ab0000">&lt;head&gt; và <span style="color:#ab0000">&lt;body&gt;</p>
+					<p> <span style="color:#ab0000">&lt;head&gt;</span> : Chứa các thông tin chung cho trang web như <span style="color:#ab0000">&lt;title&gt;</span>, 
 					<span style="color:#ab0000">&lt;meta&gt;</span>, <span style="color:#ab0000">&lt;style&gt;</span>, <span style="color:#ab0000">&lt;script&gt;</span>.</p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;body&gt;</span> : Chứa nội dung hiển thị của trang web.</p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;meta&gt;</span> : Dùng để mô tả các thông tin bổ sung như mã hoá, từ khoá, tác giả. Nằm trong <span style="color:#ab0000">&lt;head&gt;</span>.</p>
-					<p style="margin-left:20px"> <span style="color:#ab0000">&lt;title&gt;</span> : Đặt tên cho trang web, xuất hiện trong kết quả tìm kiếm.</p>
+					<p> <span style="color:#ab0000">&lt;body&gt;</span> : Chứa nội dung hiển thị của trang web.</p>
+					<p> <span style="color:#ab0000">&lt;meta&gt;</span> : Dùng để mô tả các thông tin bổ sung như mã hoá, từ khoá, tác giả. Nằm trong <span style="color:#ab0000">&lt;head&gt;</span>.</p>
+					<p> <span style="color:#ab0000">&lt;title&gt;</span> : Đặt tên cho trang web, xuất hiện trong kết quả tìm kiếm.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#0f46bc"><b>III. Phần mềm soạn thảo HTML</b></p>
-					<p style="margin-left:10px"><b>1) Phần mềm Notepad: </b></p>
-					<p style="margin-left:20px">_ Là phần mềm soạn thảo văn bản đơn giản</p>
-					<p style="margin-left:10px"><b>2) Phần mềm soạn thảo HTML chuyên nghiệp nguồn mở</b></p>
-					<p style="margin-left:20px">_ Phần mềm Notepad++</p>
-					<p style="margin-left:20px">_ Phần mềm Sublime Text</p>
-					<p style="margin-left:10px"><b>3) Sử dụng trang web hỗ trợ soạn thảo HTML trực tuyến</b></p>
-					<p style="margin-left:20px">_ Yêu cầu máy tính có kết nối Internet và cài đặt trình duyệt chuẩn, có thể quan sát ngay kết quả hiển thị trang web trên trình duyệt.</p>
+					<p class="tieude1"><b>III. Phần mềm soạn thảo HTML</b></p>
+					<p class="tieude2"><b>1) Phần mềm Notepad: </b></p>
+					<p>_ Là phần mềm soạn thảo văn bản đơn giản</p>
+					<p class="tieude2"><b>2) Phần mềm soạn thảo HTML chuyên nghiệp nguồn mở</b></p>
+					<p>_ Phần mềm Notepad++</p>
+					<p>_ Phần mềm Sublime Text</p>
+					<p class="tieude2"><b>3) Sử dụng trang web hỗ trợ soạn thảo HTML trực tuyến</b></p>
+					<p>_ Yêu cầu máy tính có kết nối Internet và cài đặt trình duyệt chuẩn, có thể quan sát ngay kết quả hiển thị trang web trên trình duyệt.</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#0f46bc"><b>IV. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1) Phần từ HTML không thể lồng: </b></p>
+					<p class="tieude1"><b>IV. Luyện tập</b></p>
+					<p class="tieude2"><b>1) Phần từ HTML không thể lồng: </b></p>
 					<p style="margin-left:20px">_ Các thẻ tiêu đề như <span style="color:#ab0000">&lt;h1&gt;</span>, <span style="color:#ab0000">&lt;h2&gt;</span>, <span style="color:#ab0000">&lt;h3&gt;</span>,... không 
 					thể lồng với nhau.</p>
-					<p style="margin-left:10px"><b>2) Đoạn văn bản đơn giản: </b></p>
-					<img style = "border: 2px solid black; margin-left:20px" src="../anh/bai7_code.png">
+					<p class="tieude2"><b>2) Đoạn văn bản đơn giản: </b></p>
+					<img src="../anh/bai7_code.png">
 					<p style="margin-left:20px"> Đoạn mã HTML</p>
-					<img style = "border: 2px solid black; margin-left:20px; max-width: 80%; height: auto;" src="../anh/bai7_caytt.png">
+					<img src="../anh/bai7_caytt.png">
 					<p style="margin-left:20px"> Cây thông tin</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#0f46bc"><b>V. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1) Một số trang web hỗ trợ soạn thảo HTML trực tuyến: </b></p>
-					<p style="margin-left:20px"><a href ="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
-					<p style="margin-left:20px"><a href ="https://htmlcodeeditor.com/">https://htmlcodeeditor.com/</a></p>
-					<p style="margin-left:20px"><a href ="https://onecompiler.com/html/">https://onecompiler.com/html/</a></p>
-					<p style="margin-left:10px"><b>2) Tạo trang web</b></p>
-					<img style = "border: 2px solid black; margin-left:20px" src ="../anh/bai7_vdung2.png">
+					<p class="tieude1"><b>V. Vận dụng</b></p>
+					<p class="tieude2"><b>1) Một số trang web hỗ trợ soạn thảo HTML trực tuyến: </b></p>
+					<p><a href ="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
+					<p><a href ="https://htmlcodeeditor.com/">https://htmlcodeeditor.com/</a></p>
+					<p><a href ="https://onecompiler.com/html/">https://onecompiler.com/html/</a></p>
+					<p class="tieude2"><b>2) Tạo trang web</b></p>
+					<img src ="../anh/bai7_vdung2.png">
 				</div>
 			</div>
 			
