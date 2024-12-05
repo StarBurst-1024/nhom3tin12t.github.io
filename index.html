@@ -5,35 +5,50 @@
 		<title>Trang web của nhóm 3</title>
 		<style>
 			.baihoc{
+				color:white;
 				margin-left:20px; 
 				margin-right:20px;
 			}
+			
 			a{
 				text-decoration:none; 
 				color:white;
 				font-size:20px;
 			}
+			
             a:hover{
             	text-decoration:underline;
-            	text-decoration:bold;
             }
-			td{
-				border-radius:20px;
-            	font-size:20px;
-			}
+			
             .tvt{
-                background-color: rgb(182,182,182)
+                background-color: rgb(182,182,182);
+				border:2px solid;
             }
+			
             p{
             	font-size:20px;
             }
+			
+			button{
+				width:35%;
+				border:0;
+				border-radius:20px;
+				margin-bottom:10px;
+				transition: opacity 0.25s ease; transform 0.4s ease;
+				cursor: pointer;
+			}
+			
+			button:hover{
+				opacity: 0.7;
+				transform: scale(1.1);
+			}
 		</style>
 	</head>
 	<body>
 		<div style="width:70%; margin: 0 auto">
 			<table style="background-color:#f7f7f7; border:3px solid">
 				<tr>
-					<td style="height:250px; width:900px; text-align: center"><img src="anh/avatar_group.png" height="100%"></td>
+					<td style="height:250px; width:900px; text-align: center"><a href="anh/avatar_group.png"><img src="anh/avatar_group.png" height="100%"></a></td>
 					<td style="width:2400px"><span style = "font-family:Time New Roman;font-size:40px; height:100%"><b>NHÓM 3</b></span></td>
 				</tr>
 			</table>
@@ -41,9 +56,9 @@
 			<table width="100%">
 				<tr>
 					<td style="width:50%; border-radius:0; border-right: 2px solid">
-						<table style="width:400px; border:2px solid">
+						<table style="width:400px; border:0">
 							<caption style="font-size:20px">Danh sách nhóm</caption>
-							<tr style="height:35px">
+							<tr style="height:35px; border:2px solid">
 								<th>Tên</th>
 								<th>Vai trò</th>
 							</tr>
@@ -70,15 +85,15 @@
 						</table>
 						<p>Học sinh lớp 12 Toán <a href="https://thptchuyenbentre.edu.vn/" style="color:blue"> Trường THPT Chuyên Bến Tre</a></p>
 					</td>
-					<td style="width:50%">
-						<table><p style="font-size:20px">Các bài nhóm đã nghiên cứu và làm bài tập: </p>
-							<tr style="background-color:#3575fe"><td><p class="baihoc"><a href="baihoc/bai7.html">Bài 7<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-							<tr style="background-color:#8735fe"><td><p class="baihoc"><a href="baihoc/bai8.html">Bài 8<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-							<tr style="background-color:#ff5c00"><td><p class="baihoc"><a href="baihoc/bai9.html">Bài 9<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-							<tr style="background-color:#00c408"><td><p class="baihoc"><a href="baihoc/bai10.html">Bài 10<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-							<tr style="background-color:#f6c000"><td><p class="baihoc"><a href="baihoc/bai11.html">Bài 11<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-							<tr style="background-color:#ff00f5"><td><p class="baihoc"><a href="baihoc/bai12.html">Bài 12<b style="font-size:28px">&emsp;&gt;</b></a></p></td></tr>
-						</table>
+					<td style="width:50%; text-align:center">
+						<p>Các bài nhóm đã nghiên cứu và làm bài tập: </p>
+						<a href="baihoc/bai7.html"><button style="background-color:#3575fe"><p class="baihoc">Bài 7<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai8.html"><button style="background-color:#8735fe"><p class="baihoc">Bài 8<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai9.html"><button style="background-color:#ff5c00"><p class="baihoc">Bài 9<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai10.html"><button style="background-color:#00c408"><p class="baihoc">Bài 10<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai11.html"><button style="background-color:#f6c000"><p class="baihoc">Bài 11<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai12.html"><button style="background-color:#ff00f5"><p class="baihoc">Bài 12<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						
 					</td>
 				</tr>
 			</table>
