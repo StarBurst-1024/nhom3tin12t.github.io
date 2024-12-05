@@ -4,21 +4,130 @@
 		<meta charset = "utf-8">
 		<title>Bài 12</title>
 		<style>
-			p {font-family:Times New Roman;font-size:20px}
 			li {font-family:Times New Roman;font-size:20px}
 			.custom-list li::marker {color:#ff00f5;}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#cb01c3;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+			
+			#header{
+				background-color:#f7f7f7; 
+			}
+			
+			nav{
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				background-color:#cfcfcf;
+			}
+			
+			#menu{
+				display:flex;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				width:70%;
+				height:50px;
+				position: relative;
+			}
+			
+			#menu li{
+				width:33%;
+			}
+			
+			#menu li a{
+				display: inline-block;
+				line-height:50px;
+				padding: 0px 30px;
+				width:100%;
+				text-decoration:none;
+				color:black;
+				font-size:22px;
+				text-align:center;
+				background-color:#cfcfcf;
+				height:100%;
+				transition: background-color 0.25s ease;
+			}
+			
+			#menu ul.submenupf{
+				position: absolute;
+				background-color:#cfcfcf;
+				padding:20px 10px;
+				list-style-type:none;
+				width:280px;
+				display:none;
+			}
+			
+			#menu li:hover>ul.submenupf{
+				display:block;
+			}
+			
+			#menu li a:hover{
+				background-color:#e5e5e5;
+			}
+			
+			#menu ul.submenupf a{
+				padding:12px 0px;
+				line-height:25px;
+				width:280px;
+			}
 		</style>
 	</head>
 	<body style="margin:0px">
 		<div>
-			<div style="background-color:#ff00f5; height:125px; text-align:center; border:1px solid; border-color:#ff00f5">
-				<p style="color:white; font-size:40px"><b>BÀI 12: TẠO BIỂU MẪU</b></p>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
+			
+			<header style="background-color:#ff00f5; height:125px; text-align:center; border:1px solid; border-color:#ff00f5">
+				<p style="color:white; font-size:40px"><b>BÀI 12: TẠO BIỂU MẪU</b></p>
+			</header>
+			
 			<div style="margin:10px; border:1px solid; border-color:#ff00f5">
 			
 				<div>
-					<p style="font-size:30px; color:#cb01c3"><b>I. Biểu mẫu web</b></p>
-					<p style="margin-left:20px">_ Biểu mẫu (form) cho phép người dùng nhập dữ liệu và xử lý tại chỗ hoặc gửi về máy chủ. Thường gặp biểu mẫu khi đăng ký tài khoản, mua hàng, tìm kiếm thông tin, ... .</p>
+					<p class="tieude1"><b>I. Biểu mẫu web</b></p>
+					<p>_ Biểu mẫu (form) cho phép người dùng nhập dữ liệu và xử lý tại chỗ hoặc gửi về máy chủ. Thường gặp biểu mẫu khi đăng ký tài khoản, mua hàng, tìm kiếm thông tin, ... .</p>
 					<p style="margin-left:20px; margin-bottom:0px">_ Biểu mẫu web có hai thành phần:</p>
 					<ul class="custom-list" style="font-size:20px; line-height:1.5; list-style-type:disc; margin-top:0px">
 						<li><em>Biểu mẫu hiển thị trên web</em>: tạo bằng HTML để người dùng nhập và gửi thông tin.</li>
@@ -54,46 +163,46 @@
 										<th style="background-color:#f7941d; border-color:#f7941d"; width="20%">Minh họa</th>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">text</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="text"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra trường nhập văn bản.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input style="font-size:15px" type="text" placeholder="Nhập nội dung vào đây"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">text</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="text"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra trường nhập văn bản.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input style="font-size:15px" type="text" placeholder="Nhập nội dung vào đây"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">password</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="password"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra trường nhập mật khẩu, dùng để nhập văn bản nhưng bị che thông tin.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input style="font-size:15px" type="password" placeholder="Nhập mật khẩu"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">password</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="password"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra trường nhập mật khẩu, dùng để nhập văn bản nhưng bị che thông tin.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input style="font-size:15px" type="password" placeholder="Nhập mật khẩu"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">radio</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="radio"<br><span style="color:red">value</span>="A"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra ô chọn 1 giá trị duy nhất trong các phần tử <span style="color:#ab0000">radio</span> cùng tên (name). Cần thêm thuộc tính <span style="color:red">value</span> để ghi nhận giá trị.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input type="radio" name="vdradio"><input type="radio" name="vdradio"><input type="radio" name="vdradio"><input type="radio" name="vdradio"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">radio</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="radio"<br><span style="color:red">value</span>="A"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra ô chọn 1 giá trị duy nhất trong các phần tử <span style="color:#ab0000">radio</span> cùng tên (name). Cần thêm thuộc tính <span style="color:red">value</span> để ghi nhận giá trị.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input type="radio" name="vdradio"><input type="radio" name="vdradio"><input type="radio" name="vdradio"><input type="radio" name="vdradio"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">checkbox</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="checkbox"<br><span style="color:red">value</span>="Toán"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra ô chọn giá trị giá trị có hoặc không. Cần thêm thuộc tính <span style="color:red">value</span> để ghi nhận giá trị.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input type="checkbox" name="vdckbx"><input type="checkbox" name="vdckbx"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">checkbox</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="checkbox"<br><span style="color:red">value</span>="Toán"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra ô chọn giá trị giá trị có hoặc không. Cần thêm thuộc tính <span style="color:red">value</span> để ghi nhận giá trị.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input type="checkbox" name="vdckbx"><input type="checkbox" name="vdckbx"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">button</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="button"<br><span style="color:red">value</span>="Nhấn vào đây"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra một nút bấm. Cần thêm thuộc tính <span style="color:red">value</span>=<span style="color:#5600b0">"tên_hiện_trên-nút"</span>.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input style="font-size:15px" type="button" value="Nhấn vào đây"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">button</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="button"<br><span style="color:red">value</span>="Nhấn vào đây"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra một nút bấm. Cần thêm thuộc tính <span style="color:red">value</span>=<span style="color:#5600b0">"tên_hiện_trên-nút"</span>.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input style="font-size:15px" type="button" value="Nhấn vào đây"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">file</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="file"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra nút để chọn tệp tin và tải lên máy chủ.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input style="font-size:15px" type="file"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">file</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="file"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra nút để chọn tệp tin và tải lên máy chủ.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input style="font-size:15px" type="file"></td>
 									</tr>
 									<tr style="font-family:Calibri; font-size:20px" height="60px">
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="10%"><span style="color:red">submit</span></td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><span style="color:red">type</span>="submit"<br><span style="color:red">value</span>="Gửi thông tin"</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="35%">Tạo ra nút để gửi thông tin đến máy chủ, trình duyệt sẽ gọi tới đường dẫn chỉ định tại thuộc tính <span style="color:red">action</span> của thẻ <span style="color:#ab0000">form</span>. Cần thêm thuộc tính <span style="color:red">value</span> như button.</td>
-										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px"; width="20%"><input style="font-size:15px" type="submit" value="Gửi thông tin"></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="10%"><span style="color:red">submit</span></td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><span style="color:red">type</span>="submit"<br><span style="color:red">value</span>="Gửi thông tin"</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="35%">Tạo ra nút để gửi thông tin đến máy chủ, trình duyệt sẽ gọi tới đường dẫn chỉ định tại thuộc tính <span style="color:red">action</span> của thẻ <span style="color:#ab0000">form</span>. Cần thêm thuộc tính <span style="color:red">value</span> như button.</td>
+										<td style="background-color:#3bc9ea; border-color:#3bc9ea; padding-left:20px" width="20%"><input style="font-size:15px" type="submit" value="Gửi thông tin"></td>
 									</tr>
 								</table>
 							</div>
@@ -155,8 +264,8 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#cb01c3"><b>II. Thực hành</b></p>
-					<p style="margin-left:10px"><b>Nhiệm vụ 1: </b></p>
+					<p class="tieude1"><b>II. Thực hành</b></p>
+					<p class="tieude2"><b>Nhiệm vụ 1: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto">
 						<h2>Thông tin món ăn</h2>
 						<form>
@@ -170,7 +279,7 @@
 							<input id="soluong" type="number" name="num" style="margin-top:10px; margin-bottom:10px">
 						</form>
 					</div>
-					<p style="margin-left:10px"><b>Nhiệm vụ 2: </b></p>
+					<p class="tieude2"><b>Nhiệm vụ 2: </b></p>
 					<div style="border:1px solid; width:30%; margin:0 auto">
 						<h1>Đăng kí môn thi tốt nghiệp</h1>
 						<form>
@@ -213,23 +322,23 @@
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#cb01c3"><b>III. Luyện tập</b></p>
-					<p style="margin-left:10px"><b>1. Cách sử dụng của một số loại phần tử form: </b></p>
-					<p style="margin-left:20px">Phần tử input nhập văn bản: <input style="font-size:15px" type="text" placeholder="Nhập nội dung vào đây"></p>
-					<p style="margin-left:20px">_ Dùng để nhập các dữ liệu bao gồm cà số, chữ, kí hiệu đặc biệt, ...; thường dùng khi nhập: tên, trường học, địa chỉ, ...</p>
-					<p style="margin-left:20px">Phần tử input nhập số: <input style="font-size:15px" type="number" placeholder="Nhập số vào đây"></p>
-					<p style="margin-left:20px">_ Dùng để nhập các dữ liệu chỉ bao gồm chữ số; thường dùng khi nhập: số CCCD, tuổi, số xác thực, ...</p>
-					<p style="margin-left:20px">Phần tử input nhập ngày tháng: <input style="font-size:15px" type="date"></p>
-					<p style="margin-left:20px">_ Dùng để nhập các dữ liệu ngày tháng; thường dùng khi nhập: ngày tháng năm sinh, ngày vào đoàn, ngày nộp báo cáo, ...</p>
-					<p style="margin-left:20px">Phần tử input chọn giá trị: <input style="font-size:15px" type="radio" name="vidu"><input style="font-size:15px" type="radio" name="vidu"><input style="font-size:15px" type="radio" name="vidu"></p>
-					<p style="margin-left:20px">_ Dùng để: chọn trắc nghiệm (kiểm tra), chọn giới tính, chọn môn học, ...</p>
-					<p style="margin-left:20px">Phần tử input tải lên tệp: <input style="font-size:15px" type="file"></p>
-					<p style="margin-left:20px">_ Dùng để tải lên các tệp; thường dùng khi: nộp bài tự luận (kiểm tra), tải tệp lên drive, tải tệp lên gmail, ...</p>
+					<p class="tieude1"><b>III. Luyện tập</b></p>
+					<p class="tieude2"><b>1. Cách sử dụng của một số loại phần tử form: </b></p>
+					<p>Phần tử input nhập văn bản: <input style="font-size:15px" type="text" placeholder="Nhập nội dung vào đây"></p>
+					<p>_ Dùng để nhập các dữ liệu bao gồm cà số, chữ, kí hiệu đặc biệt, ...; thường dùng khi nhập: tên, trường học, địa chỉ, ...</p>
+					<p>Phần tử input nhập số: <input style="font-size:15px" type="number" placeholder="Nhập số vào đây"></p>
+					<p>_ Dùng để nhập các dữ liệu chỉ bao gồm chữ số; thường dùng khi nhập: số CCCD, tuổi, số xác thực, ...</p>
+					<p>Phần tử input nhập ngày tháng: <input style="font-size:15px" type="date"></p>
+					<p>_ Dùng để nhập các dữ liệu ngày tháng; thường dùng khi nhập: ngày tháng năm sinh, ngày vào đoàn, ngày nộp báo cáo, ...</p>
+					<p>Phần tử input chọn giá trị: <input style="font-size:15px" type="radio" name="vidu"><input style="font-size:15px" type="radio" name="vidu"><input style="font-size:15px" type="radio" name="vidu"></p>
+					<p>_ Dùng để: chọn trắc nghiệm (kiểm tra), chọn giới tính, chọn môn học, ...</p>
+					<p>Phần tử input tải lên tệp: <input style="font-size:15px" type="file"></p>
+					<p>_ Dùng để tải lên các tệp; thường dùng khi: nộp bài tự luận (kiểm tra), tải tệp lên drive, tải tệp lên gmail, ...</p>
 				</div>
 				
 				<div>
-					<p style="font-size:30px; color:#cb01c3"><b>IV. Vận dụng</b></p>
-					<p style="margin-left:10px"><b>1. Tạo biểu mẫu đăng kí thành viên câu lạc bộ: </b></p>
+					<p class="tieude1"><b>IV. Vận dụng</b></p>
+					<p class="tieude2"><b>1. Tạo biểu mẫu đăng kí thành viên (Form đăng kí thành viên nhóm 3 - Quay về trang chủ) </b></p>
 				</div>
 			</div>
 			
