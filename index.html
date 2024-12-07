@@ -4,6 +4,10 @@
 		<meta charset = "utf-8">
 		<title>Trang web của nhóm 3</title>
 		<style>
+			body{
+				font-family:Arial;
+			}
+			
 			.baihoc{
 				color:white;
 				margin-left:20px; 
@@ -20,19 +24,32 @@
             	text-decoration:underline;
             }
 			
-            .tvt{
-                background-color: rgb(182,182,182);
-				border:2px solid;
+            .tv{
+                text-decoration:none; 
+				color:black; 
+				margin-left:10px;
             }
 			
             p{
             	font-size:20px;
             }
 			
-			button{
-				width:35%;
+			button.ten{
+				height:80px;
+				width:350px;
+				background-color:#c3ffc5;
 				border:0;
-				border-radius:20px;
+				border-radius:15px;
+				margin:20px;
+				font-size:18px;
+				transition: opacity 0.25s ease; transform 0.4s ease;
+				cursor: pointer;
+			}
+			
+			button.bai{
+				width:320px;
+				border:0;
+				border-radius:15px;
 				margin-bottom:10px;
 				transition: opacity 0.25s ease; transform 0.4s ease;
 				cursor: pointer;
@@ -53,52 +70,56 @@
 				</tr>
 			</table>
 			<br><br>
-			<table width="100%">
-				<tr>
-					<td style="width:50%; border-radius:0; border-right: 2px solid">
-						<table style="width:400px; border:0">
-							<caption style="font-size:20px">Danh sách nhóm</caption>
-							<tr style="height:35px; border:2px solid">
-								<th>Tên</th>
-								<th>Vai trò</th>
-							</tr>
-							<tr style="height:30px">
-								<td class="tvt"><a href="profile/profile_quocan.html" style="text-decoration:none; color:black; margin-left:10px">Phan Quốc Ân</a></td>
-								<td>Thành viên</td>
-							</tr>
-							<tr style="height:30px">
-								<td class="tvt"><a href="profile/profile_hoanghuy.html" style="text-decoration:none; color:black; margin-left:10px">Nguyễn Tấn Hoàng Huy</a></td>
-								<td>Thành viên</td>
-							</tr>
-							<tr style="height:30px">
-								<td class="tvt"><a href="profile/profile_hoangphuc.html" style="text-decoration:none; color:black; margin-left:10px">Lê Hoàng Phúc</a></td>
-								<td>Phó nhóm</td>
-							</tr>
-							<tr style="height:30px">
-								<td class="tvt"><a href="profile/profile_minhtam.html" style="text-decoration:none; color:black; margin-left:10px">Nguyễn Minh Tâm</a></td>
-								<td>Trưởng nhóm</td>
-							</tr>
-							<tr style="height:30px">
-								<td class="tvt"><a href="profile/profile_hoangtuan.html" style="text-decoration:none; color:black; margin-left:10px">Lê Hoàng Tuấn</a></td>
-								<td>Thành viên</td>
-							</tr>
-						</table>
-						<p>Học sinh lớp 12 Toán <a href="https://thptchuyenbentre.edu.vn/" style="color:blue"> Trường THPT Chuyên Bến Tre</a></p>
-					</td>
-					<td style="width:50%; text-align:center">
-						<p>Các bài nhóm đã nghiên cứu và làm bài tập: </p>
-						<a href="baihoc/bai7.html"><button style="background-color:#3575fe"><p class="baihoc">Bài 7<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						<a href="baihoc/bai8.html"><button style="background-color:#8735fe"><p class="baihoc">Bài 8<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						<a href="baihoc/bai9.html"><button style="background-color:#ff5c00"><p class="baihoc">Bài 9<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						<a href="baihoc/bai10.html"><button style="background-color:#00c408"><p class="baihoc">Bài 10<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						<a href="baihoc/bai11.html"><button style="background-color:#f6c000"><p class="baihoc">Bài 11<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						<a href="baihoc/bai12.html"><button style="background-color:#ff00f5"><p class="baihoc">Bài 12<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
-						
-					</td>
-				</tr>
-			</table>
+			
+			<div style="text-align:center; display:flex; flex-direction:column; border-radius:15px; background-color:#13d19e; width:80%; margin:0 auto">
+				<div style="border-radius:15px; margin:0 auto; margin-top:10px; color:white"><p><b>Danh sách nhóm</b></p></div>
+				<div>
+					<a href="profile/profile_quocan.html" class="tv"><button class="ten"><b>Phan Quốc Ân | Thành viên</b></button></a>
+					<a href="profile/profile_hoanghuy.html" class="tv"><button class="ten"><b>Nguyễn Tấn Hoàng Huy | Thành viên</b></button></a>
+				</div>
+				<div>
+					<a href="profile/profile_hoangphuc.html" class="tv"><button class="ten"><b>Lê Hoàng Phúc | Phó nhóm</b></button></a>
+					<a href="profile/profile_minhtam.html" class="tv"><button class="ten"><b>Nguyễn Minh Tâm | Trưởng nhóm</b></button></a>
+				</div>
+				<div>
+					<a href="profile/profile_hoangtuan.html" class="tv"><button class="ten"><b>Lê Hoàng Tuấn | Thành viên</b></button></a>
+				</div>
+				<div>
+					<p>Học sinh lớp 12 Toán <a href="https://thptchuyenbentre.edu.vn/" style="color:blue"> Trường THPT Chuyên Bến Tre</a></p>
+				</div>
+				<div style="text-align:left; padding:20px">
+					<p>
+						Một số thông tin về nhóm:
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</p>
+				</div>
+			</div>
 			<br><br>
-			<div style="background-color:#f7f7f7; border:3px solid">
+			
+			<div style="text-align:center; display:flex; flex-direction:column; border-radius:15px; width:80%; margin:0 auto; background-color:#ededed">
+				<p><b>Các bài nhóm đã nghiên cứu và làm bài tập: </b></p>
+				<div style="display:flex">
+					<div style="flex:1">
+						<a href="baihoc/bai7.html"><button style="background-color:#3575fe" class="bai"><p class="baihoc">Bài 7<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai8.html"><button style="background-color:#8735fe" class="bai"><p class="baihoc">Bài 8<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai9.html"><button style="background-color:#ff5c00" class="bai"><p class="baihoc">Bài 9<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+					</div>
+					<div style="flex:1">
+						<a href="baihoc/bai10.html"><button style="background-color:#00c408" class="bai"><p class="baihoc">Bài 10<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai11.html"><button style="background-color:#f6c000" class="bai"><p class="baihoc">Bài 11<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+						<a href="baihoc/bai12.html"><button style="background-color:#ff00f5" class="bai"><p class="baihoc">Bài 12<b style="font-size:28px">&emsp;&gt;</b></p></button></a><br>
+					</div>
+				</div>
+				<br>
+			</div>
+			<br><br>
+			
+			<div style="background-color:#f7f7f7; border:3px solid; font-family:Times New Roman">
 				<p style="margin-left:20px; font-size:18px">Bản quyền thiết kế thuộc về nhóm 3. Không sao chép dưới mọi hình thức.</p>
 				<p style="margin-left:20px; font-size:18px">Bạn có nguyện vọng trở thành thành viên nhóm 3? <a href="formdky.html" style="color:blue">Đăng ký ngay.</a></p>
 			</div>
