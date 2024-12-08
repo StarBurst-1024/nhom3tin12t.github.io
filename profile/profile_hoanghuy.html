@@ -3,75 +3,18 @@
 	<head>
 		<meta charset = "utf-8">
 		<title>Hoàng Huy</title>
-		<style>			
-			#header{
-				background-color:#f7f7f7; 
-			}
-			
-			nav{
-				display:flex;
-				justify-content: space-evenly;
-				align-items: center;
-				background-color:#cfcfcf;
-			}
-			
-			#menu{
-				display:flex;
-				list-style-type:none;
-				margin:0;
-				padding:0;
-				width:70%;
-				height:50px;
-				position: relative;
-			}
-			
-			#menu li{
-				width:33%;
-			}
-			
-			#menu li a{
-				display: inline-block;
-				line-height:50px;
-				padding: 0px 30px;
-				width:100%;
-				text-decoration:none;
-				color:black;
-				font-size:22px;
-				text-align:center;
-				background-color:#cfcfcf;
-				height:100%;
-				transition: background-color 0.25s ease;
-			}
-			
-			#menu ul.submenupf{
-				position: absolute;
-				background-color:#cfcfcf;
-				padding:20px 10px;
-				list-style-type:none;
-				width:280px;
-				display:none;
-			}
-			
-			#menu li:hover>ul.submenupf{
-				display:block;
-			}
-			
-			#menu li a:hover{
-				background-color:#e5e5e5;
-			}
-			
-			#menu ul.submenupf a{
-				padding:12px 0px;
-				line-height:25px;
-				width:280px;
+		<link rel="stylesheet" href="../header.css">
+		<style>
+			th, p, h1 {
+				color:crimson;
 			}
 		</style>
 	</head>
-	<body style="margin:0">
+	<body>
 		<div id="header" style="height:257px; margin-bottom:5px">
 			<div style="display:flex; align-items:center; justify-content: space-evenly">
 				<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
-				<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				<span class="tennhom"><b>NHÓM 3</b></span>
 			</div>
 			<nav>
 				<ul id="menu">
@@ -98,38 +41,30 @@
 				</ul>
 			</nav>
 		</div>
-		<div>
-			<h1>Giới thiệu bản thân</h1>
-			<p>Họ và Tên:  <strong><em><u><mark>NGUYỄN TẤN HOÀNG HUY</mark></u></em></strong></p>
-			<hr>
-			<p>Thích cầu lông mà hông có tiền mua vợt</p>
-		</div>
-		<div>
-			<table border = "2">
-				<caption>Danh sách môn học đã đăng kí</caption>
-				<tr>
-					<th>Môn Học</th>
-					<th>Đăng kí</th>
-				</tr>
-				<tr>
-					<td>Toán học</td>
-					<td>Đã đăng kí</td>
-				</tr>
-				<tr>
-					<td>Hóa học</td>
-					<td>Đã đăng kí</td>
-				</tr>
-				<tr>
-					<td>Vật lí</td>
-					<td>Đã đăng kí</td>
-				</tr>
-				<tr>
-					<td>Địa lí</td>
-					<td>Chưa đăng kí</td>
-				</tr>
-			</table>
-		</div>
-		<h1>Đây là vận động viên <img style ="width:30%" src="https://cdn-images.vtv.vn/zoom/640_400/2022/3/25/lee-zii-jia-co-hlv-khung-dan-dat1645120565-16481871758761130790010-crop-1648187209760621990830.jpg"> mà Huy yêu thích nhất.</h1>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2B2_wt96Q5w?si=JyMTFXBJmMBUuulx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<p> Trang web giới thiệu về bản thân tôi.</p>
+		<table border="2">
+			<tr>
+				<th><h2>Họ và Tên</h2></th>
+				<th><h3>Nguyễn Tấn Hoàng Huy </h3></th>
+			</tr>
+			<tr>
+				<th> Đam mê </th>
+				<th> Thích đánh cầu và đi ăn với gái xênh</th>
+			</tr>
+			<tr>
+				<th> Hình ảnh vận động viên tui thích</th> 
+				<th> <imgsrc="https://zoominton.com/storage/uploads/lee-zii-jia-malaysia-badminton.jpg"> </th>
+			</tr>		
+			<tr>
+				<th> All eng 21  </th>
+				<td>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/2B2_wt96Q5w?si=Kehmsqn1R23DfioM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</td>     
+			</tr>
+			<tr>
+				<th>Hoàng Huy nè</th> 
+				<th> <img src="E:\z6110925409523_41880cef06096a8ab9a428897adc93ec.jpg"alt="Hoàng Huy" height="300px"> </th>
+			</tr>
+		</table>  
 	</body>
 </html>
