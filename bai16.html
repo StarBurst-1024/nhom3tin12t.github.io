@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Bài 16</title>
+		<link rel="stylesheet" href="../header.css">
+		<style>
+			img{
+				border: 2px solid black; 
+				margin-left:20px;
+			}
+			
+			p{
+				font-family:Times New Roman;
+				font-size:20px;
+				margin-left:20px;
+			}			
+			
+			.tieude1{
+				font-size:30px;
+				color:#09b289;
+				margin-left:5px !important;
+			}
+			
+			.tieude2{
+				margin-left:10px !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="header" style="height:257px; margin-bottom:5px">
+				<div style="display:flex; align-items:center; justify-content: space-evenly">
+					<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
+					<span style = "font-family:Time New Roman;font-size:40px; height:100%; width:55%"><b>NHÓM 3</b></span>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li><a href="../index.html">Trang chủ</a></li>
+						<li><a>Profile thành viên</a>
+							<ul class="submenupf">
+								<li><a href="../profile/profile_quocan.html">Phan Quốc Ân</a></li>
+								<li><a href="../profile/profile_hoanghuy.html">Nguyễn Tấn Hoàng Huy</a></li>
+								<li><a href="../profile/profile_hoangphuc.html">Lê Hoàng Phúc</a></li>
+								<li><a href="../profile/profile_minhtam.html">Nguyễn Minh Tâm</a></li>
+								<li><a href="../profile/profile_hoangtuan.html">Lê Hoàng Tuấn</a></li>
+							</ul>
+						</li>
+						<li><a>Bài học</a>
+							<ul class="submenupf">
+								<li><a href="bai7.html">Bài 7</a></li>
+								<li><a href="bai8.html">Bài 8</a></li>
+								<li><a href="bai9.html">Bài 9</a></li>
+								<li><a href="bai10.html">Bài 10</a></li>
+								<li><a href="bai11.html">Bài 11</a></li>
+								<li><a href="bai12.html">Bài 12</a></li>
+								<li><a href="bai13.html">Bài 13</a></li>
+								<li><a href="bai14.html">Bài 14</a></li>
+								<li><a href="bai15.html">Bài 15</a></li>
+								<li><a href="bai16.html">Bài 16</a></li>
+								<li><a href="bai17.html">Bài 17</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<header style="background-color:#09d6a5; height:125px; text-align:center; border:1px solid; border-color:#09d6a5">
+				<p style="color:white; font-size:40px"><b>BÀI 16: ĐỊNH DẠNG KHUNG</b></p>
+			</header>
+			
+			<div style="margin:10px; border:1px solid; border-color:#09d6a5">
+			
+				<div>
+					<p class="tieude1"><b>IV. Luyện tập</b></p>
+					<p class="tieude2"><b>1) Ẩn phẩn tử HTML:</b></p>
+					<p>- Có,  ta sử dụng lệnh CSS display: none; </p>
+					<p class="tieude2"><b>2) Ý nghĩa của định dạng CSS: </b></p>
+					<p>- .test .test_more: Đây là một bộ chọn đồng thời (class selector) áp dụng cho các phần tử có cả hai lớp tên là "test" và "test_more". Điều này có nghĩa là chỉ các phần tử có cả hai lớp tên này sẽ được áp dụng định dạng.</p>
+					<p>- background-color: red;: Đây là thuộc tính CSS được sử dụng để đặt màu nền (background-color) của các phần tử được chọn. Trong trường hợp này, màu nền của các phần tử có lớp tên "test" và "test_more" sẽ được đặt là đỏ (red)</p>
+				</div>
+				
+				<div>
+					<p class="tieude1"><b>V. Vận dụng</b></p>
+					<p class="tieude2"><b>1) Ý nghĩa các mẫu định dạng tổng quát sau:</b></p>
+					<p>Cách giải quyết:</p>
+					<p>Gắn một lớp tên riêng cho P1, ví dụ: &lt;p class="important"&gt;Đoạn P1&lt;/p&gt;. Đây là lớp tên dùng để định dạng đoạn P1.</p>
+					<p>Gắn cùng một lớp tên cho P2 và P3, ví dụ: &lt;p class="normal"&gt;Đoạn P2&lt;/p&gt; và &lt;p class="normal"&gt;Đoạn P3&lt;/p&gt;. Đây là lớp tên dùng để định dạng đoạn P2 và P3.</p>
+					<p>Sử dụng CSS để áp dụng các định dạng khác biệt cho các lớp tên tương ứng.</p>
+					<p class="tieude2"><b>2) Ý nghĩa các mẫu định dạng tổng quát sau:</b></p>
+					<p>Có, bạn có thể thiết lập định dạng khác nhau cho các khung và viền trên, dưới, trái, phải bằng cách sử dụng thuộc tính CSS border và các thuộc tính liên quan.</p>
+					<p>Ví dụ:</p>
+					<p>body{ </p>
+					<p style="margin-left:40px">border-top: 1px solid red; </p>
+					<p style="margin-left:40px">border-bottom: 2px dashed blue; </p>
+					<p style="margin-left:40px">border- left: 3px dotted green;</p>
+					<p style="margin-left:40px">border-right: 4px double purple;</p>
+					<p>}</p>				
+				</div>
+			</div>
+			
+			<footer style="background-color:#09d6a5; height:80px">
+				<div style="display: flex; height:100%">
+					<div style="flex: 1; height:100%; text-align:center">
+						<p style="font-size:22px; font-family:Arial; color:white">Nhóm 3 - Lớp 12 Toán</p>
+					</div>
+					<div style="flex: 3; height:100%; text-align:center">
+						<a style="text-decoration:none" href="../index.html"><p style="font-size:22px; font-family:Arial; color:white">Giới thiệu về nhóm</p></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
