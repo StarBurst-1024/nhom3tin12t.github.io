@@ -13,28 +13,98 @@
 				margin-top:10px;
 			}
 			
-			p:hover{
-				font-weight: bold;
+			.left p{
+				font-family:Verdana;
 			}
 			
-			.tt{
-				margin-left:10px; 
-				line-height:1; 
-				height:90%; 
-				width:950px; 
-				border:2px solid;
-				border-radius:15px;
+			.right p{
+				font-family:Verdana;
+			}
+			
+			.box{
+				display:flex;
+				border-radius:20px;
+				box-shadow: 0 4px 20px 8px rgba(255, 255, 255, 0.35);
+				overflow: hidden;
+				width:80%; 
+				margin:20px;
+			}
+			
+			.left{
+				flex:1;
+				display:flex;
+				flex-direction:column;
+				background-color:rgba(255,255,255,0.5);
+				padding:20px;
+				justify-content: center;
+				align-items:center;
+				
+			}
+			.right{
+				flex:3;
+				background-color:white;
+				display:flex;
+				flex-direction:column;
+				padding:10%;
+				padding-bottom:20px;
+				padding-top:5px;
+				justify-content: center;
+				
 			}
 			
 			.avatar{
-				height:100%;
+				width:70%;
 				border:2px solid;
 				border-radius:50%;
-			]
+				marign:25px;
+			}
+			
+			.ho{
+				font-family:Verdana;
+				font-size:30px;
+				color:gray;
+				margin:0px;
+				margin-top:10%
+			}
+			
+			.ten{
+				font-family:Verdana;
+				font-weight:bold;
+				font-size:80px;
+				color:#f6b100;
+				margin:0px;
+			}
+			
+			.mota{
+				font-family:Verdana;
+				font-size:20px;
+				color:gray;
+				margin:0px;
+			}
+			
+			a.link{
+				flex:1;
+			}
+			
+			a.link img{
+				height:48px;
+				margin:5px;
+			}
+			
+			a.link img:hover{
+				opacity:50%;
+			}
+			
+			p.hd2{
+				font-family:Verdana;
+				font-weight:bold;
+				text-align:right;
+				width:90%;
+			}
 		</style>
 	</head>
-	<body>
-		<div id="header" style="height:257px; margin-bottom:5px">
+	<body style="background-image:url(../anh/space.png);background-repeat: no-repeat; background-attachment: fixed;">
+		<div id="header" style="height:254px">
 			<div style="display:flex; align-items:center; justify-content: space-evenly">
 				<a href="../anh/avatar_group.png"><img src="../anh/avatar_group.png" height="200px" style="border:0px; margin:0"></a>
 				<span class="tennhom"><b>NHÓM 3</b></span>
@@ -69,26 +139,62 @@
 				</ul>
 			</nav>
 		</div>
-		<div style="display: flex; height:600px; margin:30px">
-			<div style="height:90%; text-align:center">
-				<img src="../anh/profile_avatar_mt.png" class="avatar" alt="Ảnh đại diện - Nguyễn Minh Tâm">
+		
+		<div style="width:100%; display:flex; flex-direction:column; align-items: center">
+			<div class="box" style="width:95%; display:flex; margin-top:40px">
+				<div class="left">
+					<img src="../anh/profile_avatar_mt.png" class="avatar" alt="Ảnh đại diện - Nguyễn Minh Tâm">
+				</div>
+				<div class="right">
+					<p class="ho">NGUYỄN</p>
+					<p class="ten">MINH TÂM</p>
+					<div style="display:flex; justify-content:space-between; margin-top:15px">
+						<p class="mota">Nhóm trưởng nhóm 3</p>
+						<div style="display:flex; justify-content:flex-end; width:100px">
+							<a href="https://www.facebook.com/profile.php?id=100075138425738" target="_blank" class="link"><img src="../anh/fb_button.png"></a>
+							<a href="https://www.youtube.com/@nmtvfts352" target="_blank" class="link"><img src="../anh/yt_button.png"></a>
+						</div>
+					</div>
+					<p style="width:95%; border-top:1px solid gray"></p>
+				</div>
 			</div>
-			<div class="tt">
-				<p style="font-size:30px; text-align:center"><b>Giới thiệu bản thân</b></p>
-				<p>Họ và tên: Nguyễn Minh Tâm</p>
-				<p>Lớp: 12 Toán</p>
-				<p>Sinh nhật: 03/03/2007</p>
-				<p>Cung hoàng đạo: Song Ngư</p>
-				<p>Sở thích: cờ vua, rubik, ...</p>
-				<p>Màu sắc yêu thích: <span style="font-size:35px; color:#505050">•</span>, <span style="font-size:35px; color:#007dff">•</span>, <span style="font-size:35px; color:#26c2a3">•</span></p>
-				<table style="margin:0">
-						<tr>
-							<td><p>Các bài hát yêu thích:</p></td>
-							<td><iframe src="https://www.youtube.com/embed/1fOBgosDo7s?si=edvtxNdCRZgKzj3b" width="90%"></iframe></td>
-							<td><iframe src="https://www.youtube.com/embed/ZuJyn7lwkZQ?si=IH_Wm0IflIx_XWMS" width="90%"></iframe></td>
-						</tr>
-				</table>
-				<p>Là trưởng nhóm của nhóm 3 Tin học lớp 12 Toán</p>
+			
+			<div class="box">
+				<div class="left">
+					<p class="hd2">Thông tin</p>
+					<p class="hd2">cá nhân</p>
+				</div>
+				<div class="right">
+					<p>Họ và tên: Nguyễn Minh Tâm</p>
+					<p>Lớp: 12 Toán</p>
+					<p>Ngày sinh: 03/03/2007</p>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					<p class="hd2">Sở thích</p>
+				</div>
+				<div class="right">
+					<p>_ Cờ vua: </p>
+					<p style="margin-left:50px">Tài khoản chess.com: <a href="https://www.chess.com/member/nmtvfts352" style="text-decoration:none; color:blue">nmtvfts352</a></p>
+					<p style="margin-left:50px">Thành tựu: <a href="https://www.chess.com/analysis/game/live/125724558537"><img src="../anh/mt_nsac.png" style="height:50px; border-radius:10px"></a> <a href="https://www.chess.com/analysis/game/live/125025540287"><img src="../anh/mt_qsac.png" style="height:50px; border-radius:10px"></a></p>
+					<p>_ Bài hát yêu thích:</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/1fOBgosDo7s?si=rpA257M2hyHJdDFj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZuJyn7lwkZQ?si=2nD5EBjRa1A7B-dS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<p>_ Giải Rubik: 2x2x2, 3x3, 4x4, 5x5. 7x7, Square-1, Pyraminx 3x3, Megaminx, Mirror 3x3</p>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					<p class="hd2">Liên hệ</p>
+				</div>
+				<div class="right">
+					<p>Facebook: <a href="https://www.facebook.com/nguyen.minh.tam.181425/" style="text-decoration:none; color:blue">Nguyễn Minh Tâm</a></p>
+					<p>Gmail: nmt337@gmail.com</p>
+				</div>
 			</div>
 		</div>
 	</body>
