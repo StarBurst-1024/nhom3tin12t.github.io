@@ -1,0 +1,102 @@
+p{
+	font-family:Times New Roman; 
+	font-size:20px; 
+	margin-left:20px; 
+	margin-right:20px; 
+	margin-top:10px;
+}
+
+.left p{
+	font-family:Verdana;
+}
+
+.right p{
+	font-family:Verdana;
+}
+
+.box{
+	display:flex;
+	border-radius:20px;
+	box-shadow: 0 4px 20px 8px rgba(255, 255, 255, 0.35);
+	overflow: hidden;
+	width:80%; 
+	margin:20px;
+	transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.box:hover{
+	box-shadow: 0 4px 20px 8px rgba(255, 255, 255, 0.6);
+	transform: scale(1.008);
+}
+
+.left{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	background-color:rgba(255,255,255,0.5);
+	padding:20px;
+	justify-content: center;
+	align-items:center;
+	
+}
+.right{
+	flex:3;
+	background-color:white;
+	display:flex;
+	flex-direction:column;
+	padding:10%;
+	padding-bottom:20px;
+	padding-top:5px;
+	justify-content: center;
+	
+}
+
+.avatar{
+	width:70%;
+	border:2px solid;
+	border-radius:50%;
+	marign:25px;
+}
+
+.ho{
+	font-family:Verdana;
+	font-size:30px;
+	color:gray;
+	margin:0px;
+	margin-top:10%
+}
+
+.ten{
+	font-family:Verdana;
+	font-weight:bold;
+	font-size:80px;
+	color:#f6b100;
+	margin:0px;
+}
+
+.mota{
+	font-family:Verdana;
+	font-size:20px;
+	color:gray;
+	margin:0px;
+}
+
+a.link{
+	flex:1;
+}
+
+a.link img{
+	height:48px;
+	margin:5px;
+}
+
+a.link img:hover{
+	opacity:50%;
+}
+
+p.hd2{
+	font-family:Verdana;
+	font-weight:bold;
+	text-align:right;
+	width:90%;
+}
