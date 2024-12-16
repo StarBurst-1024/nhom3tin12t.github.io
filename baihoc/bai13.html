@@ -66,36 +66,55 @@
 			</div>
 			
 			<header style="background-color:#09d6a5; height:125px; text-align:center; border:1px solid; border-color:#09d6a5">
-				<p style="color:white; font-size:40px"><b>BÀI 13: KHAI NIEM, VAI TRO CUA CSS</b></p>
+				<p style="color:white; font-size:40px"><b>BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</b></p>
 			</header>
 			
 			<div style="margin:10px; border:1px solid; border-color:#09d6a5">
 			
 				<div>
 					<p class="tieude1"><b>IV. Luyện tập</b></p>
-					<p class="tieude2"><b>1) Ẩn phẩn tử HTML:</b></p>
-					<p>- Có,  ta sử dụng lệnh CSS display: none; </p>
-					<p class="tieude2"><b>2) Ý nghĩa của định dạng CSS: </b></p>
-					<p>- .test .test_more: Đây là một bộ chọn đồng thời (class selector) áp dụng cho các phần tử có cả hai lớp tên là "test" và "test_more". Điều này có nghĩa là chỉ các phần tử có cả hai lớp tên này sẽ được áp dụng định dạng.</p>
-					<p>- background-color: red;: Đây là thuộc tính CSS được sử dụng để đặt màu nền (background-color) của các phần tử được chọn. Trong trường hợp này, màu nền của các phần tử có lớp tên "test" và "test_more" sẽ được đặt là đỏ (red)</p>
+					<p class="tieude2"><b>1) Ngôn ngữ CSS là HTML:</b></p>
+					<p>- Sai. Ngôn ngữ định dạng CSS (Cascading Style Sheets) không phải là ngôn ngữ HTML (HyperText Markup Language).</p>
+					<p>HTML được sử dụng để tạo cấu trúc và định dạng nội dung trên trang web bằng cách sử dụng các thẻ và các thuộc tính được nhúng trong các thẻ này.</p>
+					<p>Trong khi đó, CSS được sử dụng để điều chỉnh cách mà các phần tử HTML được hiển thị trên trình duyệt, bao gồm màu sắc, font chữ, khoảng cách, đường viền và các thuộc tính khác. CSS là một ngôn ngữ độc lập dùng để cung cấp phong cách và thiết kế cho các trang web, và nó hoạt động cùng với HTML để tạo ra trải nghiệm người dùng hoàn chỉnh. </p>
+					<p class="tieude2"><b>2) Thay đổi thông tin tệp CSS: </b></p>
+					<p>- Đúng. Việc chỉ cần thay đổi thông tin trong tệp CSS có thể làm thay đổi định dạng của nhiều trang web hoặc thậm chí của cả một trang web. Điều này là do CSS được sử dụng để kiểm soát phong cách và định dạng của các phần tử HTML trên trang web. Thay đổi các thuộc tính trong tệp CSS, chẳng hạn như màu sắc, kích thước, font chữ, độ dày của đường viền, và khoảng cách, có thể ảnh hưởng đến cách mà các phần tử HTML được hiển thị trên trang web. Do đó, việc chỉnh sửa CSS có thể ảnh hưởng lớn đến giao diện của nhiều trang web hoặc thậm chí của cả một trang web.</p>
 				</div>
 				
 				<div>
 					<p class="tieude1"><b>V. Vận dụng</b></p>
-					<p class="tieude2"><b>1) Ý nghĩa các mẫu định dạng tổng quát sau:</b></p>
-					<p>Cách giải quyết:</p>
-					<p>Gắn một lớp tên riêng cho P1, ví dụ: &lt;p class="important"&gt;Đoạn P1&lt;/p&gt;. Đây là lớp tên dùng để định dạng đoạn P1.</p>
-					<p>Gắn cùng một lớp tên cho P2 và P3, ví dụ: &lt;p class="normal"&gt;Đoạn P2&lt;/p&gt; và &lt;p class="normal"&gt;Đoạn P3&lt;/p&gt;. Đây là lớp tên dùng để định dạng đoạn P2 và P3.</p>
-					<p>Sử dụng CSS để áp dụng các định dạng khác biệt cho các lớp tên tương ứng.</p>
-					<p class="tieude2"><b>2) Ý nghĩa các mẫu định dạng tổng quát sau:</b></p>
+					<p class="tieude2"><b>1) Sự giống nhau và tương thích của style sheet trong phần mềm soạn thảo văn bản:</b></p>
+					<p>Sự giống nhau và tương thích của Style Sheet  trong các phần mềm soạn thảo văn bản với CSS của trang web:</p>
+					<p>- Cấu trúc và cú pháp: Cả Style Sheet trong các phần mềm soạn thảo văn bản và CSS đều tuân theo một cấu trúc và cú pháp nhất định. Thông thường, các tệp Style Sheet được viết bằng cú pháp CSS trong trang web, trong khi các chức năng tạo định dạng trong phần mềm soạn thảo văn bản cũng sẽ tuân theo một cấu trúc tương tự.</p>
+					<p>- Tính tái sử dụng: Cả hai đều hỗ trợ tính tái sử dụng. Trong CSS, bạn có thể đặt các quy tắc định dạng trong một tệp riêng và áp dụng chúng cho nhiều trang web hoặc nhiều phần tử HTML khác nhau. Tương tự, trong các phần mềm soạn thảo văn bản, bạn có thể tạo các mẫu định dạng và áp dụng chúng cho nhiều phần văn bản khác nhau.</p>				
+					<p>- Khuôn mẫu định dạng: Cả Style Sheet và CSS đều cho phép bạn tạo ra các khuôn mẫu định dạng để áp dụng cho các phần tử văn bản. Bằng cách này, bạn có thể định dạng các tiêu đề, đoạn văn, danh sách, v.v., một cách thống nhất và dễ dàng.</p>
+					<p>- Kiểm soát phong cách và định dạng: Cả Style Sheet và CSS đều cho phép bạn kiểm soát phong cách và định dạng của các phần tử văn bản. Bạn có thể điều chỉnh màu sắc, kích thước chữ, font chữ, độ dày của đường viền, khoảng cách, v.v., để tạo ra giao diện văn bản phù hợp với ý định của mình.</p>>
+					<p class="tieude2"><b>2) Thiết lập trang web: </b></p>
 					<p>Có, bạn có thể thiết lập định dạng khác nhau cho các khung và viền trên, dưới, trái, phải bằng cách sử dụng thuộc tính CSS border và các thuộc tính liên quan.</p>
 					<p>Ví dụ:</p>
-					<p>body{ </p>
-					<p style="margin-left:40px">border-top: 1px solid red; </p>
-					<p style="margin-left:40px">border-bottom: 2px dashed blue; </p>
-					<p style="margin-left:40px">border- left: 3px dotted green;</p>
-					<p style="margin-left:40px">border-right: 4px double purple;</p>
-					<p>}</p>				
+					<p>Lời giải chi tiết:</p>
+					<p> &lt;!DOCTYPE html&gt;</p>
+					<p>&lt;html lang="vi"&gt;</p>
+					<p>&lt;head&gt;</p>
+					<p> &lt;meta charset="UTF-8"&gt; </p>
+					<p>  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+					<p>  &lt;title&gt;Lịch sử CSS&lt;/title&gt; </p>
+					<p>  &lt;link rel="stylesheet" href="styles.css"&gt;</p>
+					<p>&lt;/head&gt;</p>
+					<p>&lt;body&gt;</p>
+					<p>   &lt;div class="container"&gt;</p>
+					<p>  &lt;h1 class="title"&gt;Lịch sử CSS&lt;/h1&gt;</p>
+					<p>   &lt;p&gt;Ý tưởng của CSS do kỹ sư Hakon Wium Lie, người Na Uy thiết lập năm 1994 trong khi làm việc với Tim Berners-Lee tại viện hạt nhân CERN.&lt;/p&gt;</p>
+					<p>    &lt;p&gt;Ý tưởng của CSS là tạo ra các mẫu định dạng riêng, độc lập cho các phần tử HTML của trang web. Cách tạo ngôn ngữ định dạng riêng này sẽ giúp ích rất nhiều nếu so sánh với việc định dạng theo từng thẻ HTML.&lt;/p&gt;</p>
+					<p>    &lt;h2 class="subtitle"&gt;Lịch sử các phiên bản CSS đầu tiên&lt;/h2&gt;</p>
+					<p>  &lt;p&gt;Các ý tưởng ban đầu được đưa ra năm 1994 nhưng phiên bản CSS1 chính thức ra đời năm 1996.&lt;/p&gt; </p>
+					<p> &lt;p&gt;Phiên bản tiếp theo, CSS2, được khởi động ngay sau đó nhưng mãi đến năm 1998 mới hoàn thiện. Phiên bản chính thức hoàn thiện nhất của CSS2 là CSS2.1, ra đời năm 2011, bản CSS2.1 nâng cấp được hoàn thiện năm 2016.&lt;/p&gt; </p>
+					<p>  &lt;h2 class="subtitle">Các phiên bản CSS tiếp theo&lt;/h2&gt;</p>
+					<p> &lt;p&gt;Từ bản CSS3 trở đi, CSS được phát triển theo từng gói riêng biệt. Hiện nay các gói của CSS3 vẫn đang được phát triển và hoàn thiện. Đồng thời một số chuẩn CSS4 và CSS5 vẫn đang được tiếp tục thiết lập mới.&lt;/p&gt; </p>
+					<p> &lt;p&gt;Hiện tại, hiệp hội chịu trách nhiệm phát triển các chuẩn của HTML, CSS và các công nghệ có liên quan là tổ chức World Wide Web Consortium (W3C), có địa chỉ tại &lt;a href="http://www.w3.org/">www.w3.org&lt;/a&gt;. &lt;/p&gt;</p>
+					<p>  &lt;/div&gt; </p>
+					<p> &lt;/body&gt; </p>
+					<p> &lt;/html&gt; </p> 
 				</div>
 			</div>
 			
