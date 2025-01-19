@@ -1,0 +1,110 @@
+<!DOCTYPE hmtl>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Đăng kí tham gia câu lạc bộ</title>
+		<style>
+			form{
+				width:60%;
+				margin: 0 auto; 
+				border:2px solid;
+				font-size:18px;
+			}
+			
+			label:hover{
+				color:darkblue;
+				font-weight:bold;
+			}
+			
+			h1:hover{
+				color:darkblue;
+				font-weight:bold;
+			}
+			
+			h2:hover{
+				color:darkblue;
+				font-weight:bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Biểu mẫu đăng kí tham gia Câu lạc bộ</h2>
+		<form>
+			<h1 style="margin-left:20px">Form đăng ký tham gia CLB</h1>
+			<fieldset>
+				<legend>
+					Thông tin cá nhân
+				</legend>
+				<label for="name">Họ và tên:</label>
+				<input id="name" type="text" name="hoten">
+				<br><br>
+				
+				<label for="birth">Ngày sinh:</label>
+				<input id="birth" type="date" name="ngaysinh">
+				<br><br>
+				
+				<label for="lop">Bạn học lớp: </label>
+				<select id="lop" name="sl_lop">
+					<option value="12T">12 Toán</option>
+					<option value="12TT">12 Toán-Tin</option>
+					<option value="12L">12 Lí</option>
+					<option value="12H">12 Hóa</option>
+					<option value="12S">12 Sinh</option>
+					<option value="12V">12 Văn</option>
+					<option value="12SĐ">12 Sử-Địa</option>
+					<option value="12A">12 Anh</option>
+				</select>
+				<br><br>
+				
+				<label>Giới tính:</label>
+				<input id="male" type="radio" name="gioitinh">
+				<label for="male">Nam</label>
+				<input id="female" type="radio" name="gioitinh">
+				<label for="female">Nữ</label>
+				<input id="unknown" type="radio" name="gioitinh">
+				<label for="unknown">Khác</label>
+				<br>
+				
+				<label for="sdt">SĐT:</label>
+				<input id="sdt" type="tel" name="so">
+				<br><br>
+				
+				<label for="email">Email:</label>
+				<input id="" type="email" name="thudt">
+				<br><br>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>
+					Nguyện vọng của bạn
+				</legend>
+				<label for="clb">Bạn muốn đăng kí CLB nào: </label>
+				<select id="clb" name="tenclb">
+					<option value="BD">Bóng đá</option>
+					<option value="BR">Bóng rổ</option>
+					<option value="BC">Bóng chuyền</option>
+					<option value="VT">Võ thuật</option>
+					<option value="B">Bơi</option>
+				</select>
+				<br><br>
+				
+				<label for="time">Bạn có thể tham gia vào thời gian nào: </label>
+				<select id="time" name="tenclb">
+					<option value="sang">7h-8h</option>
+					<option value="xe">13h-14h</option>
+					<option value="chieu">16h-17h</option>
+					<option value="toi">19h-20h</option>
+				</select>
+				<br><br>
+				
+				<label for="nv">Hãy viết mô tả về khả năng của bạn:</label><br>
+				<textarea style="font-size:20px; resize:none" id="nv" name="nv" rows="2" cols="30"></textarea>
+				<br>
+				
+			</fieldset>
+			<p style="margin-left:20px">Cảm ơn bạn đã đăng ký.</p>
+			<input type="submit" value="Gửi thông tin" style="margin-left:20px">
+			<br><br>
+		</form>
+	</body>
+</html>
